@@ -1,0 +1,63 @@
+{
+  "name": "gatsby-starter-ts-hello-world",
+  "version": "1.0.0",
+  "description": "Typescript Starter with the bare essentials needed for a Gatsby site",
+  "scripts": {
+    "build": "rimraf public && npm run format && npm run lint && npm run type-check && gatsby build",
+    "check-format": "prettier --list-different \"src/**/*.{ts,tsx,css,html,json,md}\" ",
+    "create-types-for-css-modules": "tcm src -c",
+    "create-types-for-sass-modules": "tsm src --nameFormat camel",
+    "css-watch": "tcm src -c --watch",
+    "develop": "gatsby develop",
+    "eslint-init": "eslint --init",
+    "format": "prettier --write \"src/**/*.{ts,tsx,css,html,json,md}\" ",
+    "lint": "eslint ./ --ext .js,.ts,.tsx,.jsx --format visualstudio --no-color --max-warnings 10 --report-unused-disable-directives --ignore-pattern 'public/*' --ignore-pattern 'coverage/*' --ignore-pattern 'node_modules/*' ",
+    "sass-watch": "tsm src --nameFormat camel --watch",
+    "serve": "gatsby serve",
+    "start": "npm run develop",
+    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing \"",
+    "tsc-init": "tsc --init",
+    "type-check": "tsc"
+  },
+  "dependencies": {
+    "gatsby": "2.15.12",
+    "gatsby-plugin-sass": "2.1.14",
+    "gatsby-plugin-typescript": "2.1.7",
+    "node-sass": "4.12.0",
+    "react": "16.9.0",
+    "react-dom": "16.9.0"
+  },
+  "devDependencies": {
+    "@types/node": "12.7.4",
+    "@types/node-sass": "4.11.0",
+    "@types/react": "16.9.2",
+    "@types/react-dom": "16.9.0",
+    "@typescript-eslint/eslint-plugin": "2.2.0",
+    "@typescript-eslint/parser": "2.2.0",
+    "eslint": "6.3.0",
+    "eslint-config-prettier": "6.2.0",
+    "eslint-plugin-prettier": "3.1.0",
+    "eslint-plugin-react": "7.14.3",
+    "prettier": "1.18.2",
+    "rimraf": "3.0.0",
+    "stylelint": "10.1.0",
+    "stylelint-config-recommended": "2.2.0",
+    "typed-css-modules": "0.6.2",
+    "typed-scss-modules": "0.0.12",
+    "typescript": "3.6.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hdorgeval/gatsby-starter-ts-hello-world.git"
+  },
+  "author": "Henri d'Orgeval",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/hdorgeval/gatsby-starter-ts-hello-world/issues"
+  },
+  "homepage": "https://github.com/hdorgeval/gatsby-starter-ts-hello-world#readme",
+  "engines": {
+    "vscode": "^1.18.0",
+    "node": ">=6.4.0"
+  }
+}
