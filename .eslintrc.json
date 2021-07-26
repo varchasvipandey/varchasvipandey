@@ -28,7 +28,11 @@
       "modules": true
     }
   },
-  "plugins": ["@typescript-eslint", "prettier", "react"],
+  "plugins": [
+    "@typescript-eslint",
+    "prettier",
+    "react"
+  ],
   "rules": {
     "indent": [
       "error",
@@ -37,8 +41,12 @@
         "SwitchCase": 1
       }
     ],
-    "no-console": ["error"],
-    "no-debugger": ["error"],
+    "no-console": [
+      "error"
+    ],
+    "no-debugger": [
+      "error"
+    ],
     "no-multiple-empty-lines": [
       "error",
       {
@@ -46,10 +54,23 @@
         "maxEOF": 1
       }
     ],
-    "semi": ["error", "always"],
-    "import/order": ["error", {
-      "groups": ["index", "sibling", "parent", "internal", "external", "builtin"]
-    }],
+    "semi": [
+      "error",
+      "always"
+    ],
+    "import/order": [
+      "error",
+      {
+        "groups": [
+          "index",
+          "sibling",
+          "parent",
+          "internal",
+          "external",
+          "builtin"
+        ]
+      }
+    ],
     "react/prop-types": "off",
     "react/display-name": "off",
     "@typescript-eslint/explicit-function-return-type": "off"

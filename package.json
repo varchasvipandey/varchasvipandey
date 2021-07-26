@@ -1,7 +1,7 @@
 {
-  "name": "gatsby-starter-ts-hello-world",
+  "name": "varchasvi-pandey-2021",
   "version": "1.0.0",
-  "description": "Typescript Starter with the bare essentials needed for a Gatsby site",
+  "description": "Varchasvi Pandey portfolio 2021",
   "scripts": {
     "build": "rimraf public && npm run format && npm run lint && npm run type-check && gatsby build",
     "check-format": "prettier --list-different \"src/**/*.{ts,tsx,css,html,json,md}\" ",
@@ -21,17 +21,23 @@
   },
   "dependencies": {
     "gatsby": "2.15.12",
+    "gatsby-plugin-react-helmet": "4.10.0",
     "gatsby-plugin-sass": "2.1.14",
+    "gatsby-plugin-styled-components": "4.10.0",
     "gatsby-plugin-typescript": "2.1.7",
     "node-sass": "4.12.0",
     "react": "16.9.0",
-    "react-dom": "16.9.0"
+    "react-dom": "16.9.0",
+    "react-helmet": "6.1.0",
+    "styled-components": "5.3.0"
   },
   "devDependencies": {
     "@types/node": "12.7.4",
     "@types/node-sass": "4.11.0",
     "@types/react": "16.9.2",
     "@types/react-dom": "16.9.0",
+    "@types/react-helmet": "6.1.2",
+    "@types/styled-components": "5.1.11",
     "@typescript-eslint/eslint-plugin": "2.2.0",
     "@typescript-eslint/parser": "2.2.0",
     "eslint": "6.3.0",
