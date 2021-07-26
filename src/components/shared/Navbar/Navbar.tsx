@@ -1,7 +1,12 @@
+import Container from './Navbar.styles';
 import React from 'react';
 
 const Navbar: React.FC = () => {
-  return <nav>This is navbar</nav>;
+  return (
+    <Container>
+      <div className="action">🧐</div>
+    </Container>
+  );
 };
 
 export default Navbar;

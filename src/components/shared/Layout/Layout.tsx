@@ -1,7 +1,9 @@
-import '../../../styles/index.scss';
 import Container from './Layout.styles';
-
 import { Navbar } from '../';
+import GlobalStyle from '../../../styles/GlobalStyle';
+import { pianoKeys } from '../../../themes';
+import { ThemeProvider } from 'styled-components';
+
 import React from 'react';
 
 import { Helmet } from 'react-helmet';
@@ -13,14 +15,17 @@ interface LayoutProps {
 
 const Layout: React.FC<LayoutProps> = ({ children, title }) => {
   return (
-    <Container>
+    <ThemeProvider theme={pianoKeys}>
+      <GlobalStyle />
       <Helmet>
         {/* Page title */}
         {!!title && <title>{title}</title>}
       </Helmet>
-      <Navbar />
-      <div className="main">{children}</div>
-    </Container>
+      <Container>
+        <Navbar />
+        <div className="main">{children}</div>
+      </Container>
+    </ThemeProvider>
   );
 };
 
