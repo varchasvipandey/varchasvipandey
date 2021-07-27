@@ -1,6 +1,6 @@
 import Container from './Section.styles';
+import { SectionHeading } from '../..';
 import React from 'react';
-import { SectionHeading } from '..';
 
 export interface SectionProps {
   heading: string;

@@ -1,7 +1,7 @@
 import Container from './Layout.styles';
-import { Navbar } from '../';
-import GlobalStyle from '../../../styles/GlobalStyle';
-import { pianoKeys } from '../../../themes';
+import { Navbar } from '../..';
+import GlobalStyle from '../../../../styles/GlobalStyle';
+import { pianoKeys } from '../../../../themes';
 import { ThemeProvider } from 'styled-components';
 
 import React from 'react';

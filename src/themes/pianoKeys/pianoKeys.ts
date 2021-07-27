@@ -18,7 +18,7 @@ const painoKeys: Theme = {
   },
 
   gradients: {
-    primary: 'linear-gradient(to right, #8775ed, #4848b6 112%)',
+    primary: 'linear-gradient(to bottom right, #4848b6, #8775ed 80%)',
   },
 
   fonts: {
