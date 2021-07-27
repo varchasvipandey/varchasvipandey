@@ -9,6 +9,14 @@ export const Title = styled.h1(
   `,
 );
 
+export const SectionHeading = styled.p(
+  ({ theme }: StyledComponentProps) => css`
+    font-size: ${theme.fonts.sectionHeading.size};
+    font-weight: ${theme.fonts.sectionHeading.weight};
+    color: ${theme.colors.text.sectionHeading};
+  `,
+);
+
 export const Text = styled.p(
   ({ theme }: StyledComponentProps) => css`
     font-size: ${theme.fonts.sectionText.size};

@@ -10,9 +10,9 @@ const painoKeys: Theme = {
 
     text: {
       title: '#333',
-      sectionHeading: '#000',
+      sectionHeading: '#333',
       sectionSubHeading: '#000',
-      sectionText: '#333',
+      sectionText: '#666',
       mutedText: '#000',
     },
   },
@@ -46,8 +46,8 @@ const painoKeys: Theme = {
 
   boxShadow: {
     normal: '0 3px 6px rgba(0,0,0,0.2)',
-    light: '0 3px 6px rgba(0,0,0,0.2)',
-    dark: '0 3px 6px rgba(0,0,0,0.2)',
+    light: '0 4px 8px rgba(0,0,0,0.1)',
+    dark: '3px 6px 10px rgba(0,0,0,0.2)',
   },
 
   maxWidth: '970px',
@@ -56,6 +56,7 @@ const painoKeys: Theme = {
     canvas: '2rem',
     section: '2rem',
     card: '2rem',
+    button: '1rem',
   },
 
   padding: {

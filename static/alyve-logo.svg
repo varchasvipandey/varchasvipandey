@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="50" height="50" viewBox="0 0 50 50">
+  <defs>
+    <linearGradient id="linear-gradient" x1="0.5" x2="0.5" y2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#8775ed"/>
+      <stop offset="1" stop-color="#fe4869"/>
+    </linearGradient>
+    <clipPath id="clip-Artboard_12">
+      <rect width="50" height="50"/>
+    </clipPath>
+  </defs>
+  <g id="Artboard_12" data-name="Artboard – 12" clip-path="url(#clip-Artboard_12)">
+    <g id="Group_11397" data-name="Group 11397" transform="translate(5 0.438)">
+      <path id="Path_1672" data-name="Path 1672" d="M221.856,107.1a49.773,49.773,0,0,0-6.961,2.087c-.206,4.761-1.127,8.825-1.74,14.383-.923,8.732-10.241.794-9.933-10.914-2.455.1-8.8-3.373-10.753-6.05-1.638-2.087-3.786-6.648-1.329-7.249A52.694,52.694,0,0,1,202.2,97.57a119.236,119.236,0,0,1,1.333-15.576C205.27,69.888,219.4,89.93,218.07,93.3a39.967,39.967,0,0,0-1.434,4.165c5.22.7,12.491,2.486,13.825,5.955,1.021,2.681-6.555,3.276-8.6,3.673" transform="translate(-190.029 -78.148)" fill="url(#linear-gradient)"/>
+    </g>
+  </g>
+</svg>

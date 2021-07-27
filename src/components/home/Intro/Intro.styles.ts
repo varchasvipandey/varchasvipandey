@@ -39,7 +39,7 @@ export default styled.section(
       }
 
       &__content {
-        box-shadow: ${theme.boxShadow.normal};
+        box-shadow: ${theme.boxShadow.light};
         padding: 4rem 4rem 4rem 8rem;
         border-radius: 8rem 2rem 2rem 8rem;
         transform: translateX(-2.4rem);

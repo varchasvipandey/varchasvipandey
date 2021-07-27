@@ -44,6 +44,7 @@ export interface Theme {
     canvas: string; // main view radius
     section: string; // section radius
     card: string; // card radius
+    button: string; // button radius
   };
 
   padding: {
