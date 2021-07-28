@@ -1,12 +1,22 @@
 import Container from './ContentCard.styles';
-import { Text } from '../..';
+import { SectionSubHeading } from '../..';
 import React from 'react';
+import * as CSS from 'csstype';
 
-const ContentCard: React.FC = () => {
+interface ContentCardProps {
+  style?: CSS.Properties;
+}
+
+const ContentCard: React.FC<ContentCardProps> = ({ style }) => {
   return (
-    <>
-      <Text>Content Card</Text>
-    </>
+    <Container style={style}>
+      <div className="image">
+        <img src="https://hatrabbits.com/wp-content/uploads/2017/01/random.jpg" alt="" />
+      </div>
+      <div className="title">
+        <SectionSubHeading>Random Text</SectionSubHeading>
+      </div>
+    </Container>
   );
 };
 

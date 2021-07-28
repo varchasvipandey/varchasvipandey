@@ -20,6 +20,7 @@
     "type-check": "tsc"
   },
   "dependencies": {
+    "csstype": "3.0.8",
     "gatsby": "2.15.12",
     "gatsby-plugin-react-helmet": "4.10.0",
     "gatsby-plugin-sass": "2.1.14",

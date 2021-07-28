@@ -16,6 +16,10 @@ export default styled.section(
 
       box-shadow: ${theme.boxShadow.light};
       border-radius: ${theme.borderRadius.section};
+
+      .list {
+        margin-top: 3.6rem;
+      }
     }
   `,
 );

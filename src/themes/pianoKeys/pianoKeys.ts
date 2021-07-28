@@ -11,9 +11,9 @@ const painoKeys: Theme = {
     text: {
       title: '#333',
       sectionHeading: '#333',
-      sectionSubHeading: '#000',
+      sectionSubHeading: '#666',
       sectionText: '#666',
-      mutedText: '#000',
+      mutedText: '#999',
     },
   },
 
@@ -31,7 +31,7 @@ const painoKeys: Theme = {
       weight: '700',
     },
     sectionSubHeading: {
-      size: '2.4rem',
+      size: '1.8rem',
       weight: '600',
     },
     sectionText: {
