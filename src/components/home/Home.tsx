@@ -1,4 +1,12 @@
-import { Intro, About, CommunityContent, UtilityProjects, GetEntertained, SideProjects } from '.';
+import {
+  Intro,
+  About,
+  CommunityContent,
+  UtilityProjects,
+  GetEntertained,
+  SideProjects,
+  TechStack,
+} from '.';
 import React from 'react';
 
 const Home: React.FC = () => {
@@ -20,6 +28,7 @@ const Home: React.FC = () => {
       <UtilityProjects />
 
       {/* My tech stack at glance */}
+      <TechStack />
 
       {/* get entertained */}
       <GetEntertained />

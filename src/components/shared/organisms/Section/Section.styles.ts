@@ -3,7 +3,7 @@ import styled, { css } from 'styled-components';
 
 export default styled.section(
   ({ theme }: StyledComponentProps) => css`
-    margin-top: 20rem;
+    margin: 20rem 0;
     padding: 0 7.2rem;
 
     .heading {
