@@ -62,18 +62,48 @@ const TechStack: React.FC = () => {
   const techImages = Object.values(data);
   const techAbout = Object.keys(data);
 
+  // DOM Refs
+  const scroller = React.useRef<HTMLDivElement | null>(null);
+
+  // -- check elem view port
+  const isElementInViewport = (el: HTMLDivElement) => {
+    var rect = el.getBoundingClientRect();
+    return rect.right > 0;
+  };
+
+  /* Scroll init */
+  React.useEffect(() => {
+    const scrollContainer = document.getElementById('scroll-container') as HTMLDivElement;
+    const scrollContainerWidth = scrollContainer.scrollWidth;
+
+    const scrollInterval = self.setInterval(() => {
+      const first = document.querySelector('#scroll-container div') as HTMLDivElement;
+      if (!isElementInViewport(first)) {
+        scrollContainer.appendChild(first);
+        scrollContainer.scrollTo(scrollContainer.scrollLeft - first.offsetWidth, 0);
+        console.log('set');
+      }
+      if (scrollContainer.scrollLeft !== scrollContainerWidth) {
+        scrollContainer.scrollTo(scrollContainer.scrollLeft + 1, 0);
+      }
+    }, 15);
+
+    return () => {
+      clearInterval(scrollInterval);
+    };
+  }, []);
+
   return (
     <Section heading="My tech stack 🔨🧰">
-      <Container>
+      <Container ref={scroller} id="scroll-container">
         {techImages.map((image: any, i: number) => (
-          <Image
+          <div
+            className="image-container"
             key={image.id}
-            className="focus-image"
-            src={image.publicURL}
-            loading="lazy"
-            alt={image.name}
             onMouseOver={() => console.log(techAbout[i])}
-          />
+          >
+            <Image className="focus-image" src={image.publicURL} loading="lazy" alt={image.name} />
+          </div>
         ))}
       </Container>
     </Section>
