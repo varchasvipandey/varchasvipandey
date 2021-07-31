@@ -1,7 +1,8 @@
-import { Section } from '../..';
-import { Container, Image } from './TechStack.styles';
+import { Section, MutedText } from '../..';
+import { Container, Image, FootNotes } from './TechStack.styles';
 import React from 'react';
 import { useStaticQuery, graphql } from 'gatsby';
+import getAboutTech from '../../../utils/getAboutTech';
 
 const TechStack: React.FC = () => {
   const data = useStaticQuery(graphql`
@@ -60,7 +61,11 @@ const TechStack: React.FC = () => {
   `);
 
   const techImages = Object.values(data);
-  const techAbout = Object.keys(data);
+  const techKeys: string[] = Object.keys(data);
+
+  // States
+  const [selectedTech, setSelectedTech] = React.useState<string>('');
+  const [pauseScroll, setPauseScroll] = React.useState<boolean>(false);
 
   // DOM Refs
   const scroller = React.useRef<HTMLDivElement | null>(null);
@@ -73,6 +78,8 @@ const TechStack: React.FC = () => {
 
   /* Scroll init */
   React.useEffect(() => {
+    if (pauseScroll) return;
+
     const scrollContainer = document.getElementById('scroll-container') as HTMLDivElement;
     const scrollContainerWidth = scrollContainer.scrollWidth;
 
@@ -91,7 +98,7 @@ const TechStack: React.FC = () => {
     return () => {
       clearInterval(scrollInterval);
     };
-  }, []);
+  }, [pauseScroll]);
 
   return (
     <Section heading="My tech stack 🔨🧰">
@@ -100,12 +107,22 @@ const TechStack: React.FC = () => {
           <div
             className="image-container"
             key={image.id}
-            onMouseOver={() => console.log(techAbout[i])}
+            onMouseOver={() => {
+              setSelectedTech(techKeys[i]);
+              setPauseScroll(true);
+            }}
+            onMouseOut={() => {
+              setPauseScroll(false);
+            }}
           >
             <Image className="focus-image" src={image.publicURL} loading="lazy" alt={image.name} />
           </div>
         ))}
       </Container>
+
+      <FootNotes>
+        <MutedText>{getAboutTech(selectedTech)}</MutedText>
+      </FootNotes>
     </Section>
   );
 };

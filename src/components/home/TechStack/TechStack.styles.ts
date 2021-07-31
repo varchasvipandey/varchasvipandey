@@ -41,3 +41,15 @@ export const Image = styled.img(
     transition: all 0.2s;
   `,
 );
+
+export const FootNotes = styled.div(
+  () =>
+    css`
+      min-height: 8rem;
+      margin-top: 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    `,
+);
