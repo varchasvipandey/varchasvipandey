@@ -16,6 +16,7 @@ export interface Theme {
       sectionHeading: string;
       sectionSubHeading: string;
       sectionText: string;
+      link: string;
       mutedText: string;
     };
   };
@@ -29,6 +30,7 @@ export interface Theme {
     sectionHeading: Font;
     sectionSubHeading: Font;
     sectionText: Font;
+    link: Font;
     mutedText: Font;
   };
 

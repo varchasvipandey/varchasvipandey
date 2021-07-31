@@ -6,3 +6,4 @@ export { default as UtilityProjects } from './UtilityProjects/UtilityProjects';
 export { default as GetEntertained } from './GetEntertained/GetEntertained';
 export { default as SideProjects } from './SideProjects/SideProjects';
 export { default as TechStack } from './TechStack/TechStack';
+export { default as GetInTouch } from './GetInTouch/GetInTouch';

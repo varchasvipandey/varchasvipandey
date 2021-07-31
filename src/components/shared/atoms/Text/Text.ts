@@ -43,6 +43,16 @@ export const Text = styled.p(({ theme, style }: CustomStyledComponents) => [
   { ...style },
 ]);
 
+export const LinkText = styled.p(({ theme, style }: CustomStyledComponents) => [
+  css`
+    font-size: ${theme.fonts.link.size};
+    font-weight: ${theme.fonts.link.weight};
+    color: ${theme.colors.text.link};
+    line-height: ${theme.lineHeight.paragraph};
+  `,
+  { ...style },
+]);
+
 export const MutedText = styled.p(({ theme, style }: CustomStyledComponents) => [
   css`
     font-size: ${theme.fonts.mutedText.size};

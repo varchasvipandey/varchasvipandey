@@ -13,6 +13,7 @@ const painoKeys: Theme = {
       sectionHeading: '#333',
       sectionSubHeading: '#666',
       sectionText: '#666',
+      link: '#666',
       mutedText: '#999',
     },
   },
@@ -36,6 +37,10 @@ const painoKeys: Theme = {
     },
     sectionText: {
       size: '1.8rem',
+      weight: '400',
+    },
+    link: {
+      size: '1.6rem',
       weight: '400',
     },
     mutedText: {

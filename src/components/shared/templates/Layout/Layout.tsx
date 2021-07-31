@@ -1,5 +1,5 @@
 import Container from './Layout.styles';
-import { Navbar } from '../..';
+import { Navbar, Footer } from '../..';
 import GlobalStyle from '../../../../styles/GlobalStyle';
 import { pianoKeys } from '../../../../themes';
 import { ThemeProvider } from 'styled-components';
@@ -24,6 +24,7 @@ const Layout: React.FC<LayoutProps> = ({ children, title }) => {
       <Container>
         <Navbar />
         <div className="main">{children}</div>
+        <Footer />
       </Container>
     </ThemeProvider>
   );

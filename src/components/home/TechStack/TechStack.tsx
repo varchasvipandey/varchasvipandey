@@ -88,7 +88,6 @@ const TechStack: React.FC = () => {
       if (!isElementInViewport(first)) {
         scrollContainer.appendChild(first);
         scrollContainer.scrollTo(scrollContainer.scrollLeft - first.offsetWidth, 0);
-        console.log('set');
       }
       if (scrollContainer.scrollLeft !== scrollContainerWidth) {
         scrollContainer.scrollTo(scrollContainer.scrollLeft + 1, 0);

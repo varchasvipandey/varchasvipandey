@@ -6,6 +6,7 @@ import {
   GetEntertained,
   SideProjects,
   TechStack,
+  GetInTouch,
 } from '.';
 import React from 'react';
 
@@ -34,6 +35,7 @@ const Home: React.FC = () => {
       <GetEntertained />
 
       {/* get in touch */}
+      <GetInTouch />
     </>
   );
 };
