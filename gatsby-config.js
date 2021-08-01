@@ -4,11 +4,35 @@ module.exports = {
     'gatsby-plugin-sass',
     `gatsby-plugin-react-helmet`,
     `gatsby-transformer-remark`,
+    `gatsby-plugin-image`,
+    `gatsby-plugin-sharp`,
+    `gatsby-transformer-sharp`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `projects`,
         path: `${__dirname}/src/content/projects/`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `utilityProjects`,
+        path: `${__dirname}/src/content/utilityProjects/`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `community`,
+        path: `${__dirname}/src/content/community/`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `entertainment`,
+        path: `${__dirname}/src/content/entertainment/`,
       },
     },
     {

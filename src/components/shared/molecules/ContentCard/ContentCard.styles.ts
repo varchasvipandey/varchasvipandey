@@ -16,12 +16,17 @@ export default styled.div(({ theme, styles }: ContentCardProps) => [
     display: flex;
     flex-direction: column;
 
+    &:hover .image img {
+      transform: scale(1.2);
+    }
+
     .image {
       flex: 1;
-      overflow: hidden;
       border-radius: ${theme.borderRadius.card} ${theme.borderRadius.card} 0 0;
+      overflow: hidden;
       img {
         width: 100%;
+        transition: transform 2s;
       }
     }
 
@@ -30,6 +35,7 @@ export default styled.div(({ theme, styles }: ContentCardProps) => [
       display: flex;
       align-items: center;
       justify-content: center;
+      padding: 0.4rem 0.8rem;
     }
   `,
   { ...styles },

@@ -1,7 +1,12 @@
 import { Section, Text, ContentTray, MutedText } from '../..';
 import React from 'react';
+import { QueryNode } from '../../../types';
 
-const GetEntertained: React.FC = () => {
+interface GetEntertainedProps {
+  entertainmentContentList: QueryNode[];
+}
+
+const GetEntertained: React.FC<GetEntertainedProps> = ({ entertainmentContentList }) => {
   return (
     <Section heading="Get entertained! 🎶">
       <Text>
@@ -11,7 +16,7 @@ const GetEntertained: React.FC = () => {
       </Text>
 
       <div className="list">
-        <ContentTray />
+        <ContentTray contentList={entertainmentContentList} />
       </div>
 
       <div style={{ textAlign: 'center', marginTop: '3.2rem' }}>

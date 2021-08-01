@@ -4,6 +4,11 @@ import React from 'react';
 import { useStaticQuery, graphql } from 'gatsby';
 import getAboutTech from '../../../utils/getAboutTech';
 
+/* 
+  SASS
+  GraphQL
+*/
+
 const TechStack: React.FC = () => {
   const data = useStaticQuery(graphql`
     {

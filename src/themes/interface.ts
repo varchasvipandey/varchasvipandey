@@ -1,3 +1,5 @@
+import * as CSS from 'csstype';
+
 export interface Font {
   size: string;
   weight: string;
@@ -60,4 +62,5 @@ export interface Theme {
 
 export interface StyledComponentProps {
   theme: Theme;
+  style?: CSS.Properties;
 }

@@ -9,8 +9,20 @@ import {
   GetInTouch,
 } from '.';
 import React from 'react';
+import { QueryNode } from '../../types';
 
-const Home: React.FC = () => {
+interface HomeProps {
+  communityContentList: QueryNode[];
+  projectsList: QueryNode[];
+  utilityProjectsList: QueryNode[];
+  entertainmentContentList: QueryNode[];
+}
+
+const Home: React.FC<HomeProps> = ({
+  communityContentList,
+  utilityProjectsList,
+  entertainmentContentList,
+}) => {
   return (
     <>
       {/* Intro */}
@@ -20,19 +32,19 @@ const Home: React.FC = () => {
       <About />
 
       {/* JS community */}
-      <CommunityContent />
+      <CommunityContent communityContentList={communityContentList} />
 
       {/* My side projects */}
-      <SideProjects />
+      {/* <SideProjects /> */}
 
       {/* My quick utility projects */}
-      <UtilityProjects />
+      <UtilityProjects utilityProjectsList={utilityProjectsList} />
 
       {/* My tech stack at glance */}
       <TechStack />
 
       {/* get entertained */}
-      <GetEntertained />
+      <GetEntertained entertainmentContentList={entertainmentContentList} />
 
       {/* get in touch */}
       <GetInTouch />

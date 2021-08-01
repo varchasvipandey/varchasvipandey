@@ -1,14 +1,18 @@
 import Container from './ContentTray.styles';
 import { ContentCard } from '../..';
 import React from 'react';
+import { QueryNode } from '../../../../types';
 
-const ContentTray: React.FC = () => {
+interface ContentTrayProps {
+  contentList: QueryNode[];
+}
+
+const ContentTray: React.FC<ContentTrayProps> = ({ contentList = [] }) => {
   return (
     <Container>
-      <ContentCard style={{ marginRight: '2rem' }} />
-      <ContentCard style={{ marginRight: '2rem' }} />
-      <ContentCard style={{ marginRight: '2rem' }} />
-      <ContentCard style={{ marginRight: '2rem' }} />
+      {contentList.map((content: QueryNode) => (
+        <ContentCard key={content.id} style={{ marginRight: '2rem' }} content={content} />
+      ))}
     </Container>
   );
 };

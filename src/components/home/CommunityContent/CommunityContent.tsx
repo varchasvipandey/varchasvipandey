@@ -1,7 +1,12 @@
 import { Section, Text, ContentTray } from '../..';
 import React from 'react';
+import { QueryNode } from '../../../types';
 
-const CommunityContent: React.FC = () => {
+interface CommunityContentProps {
+  communityContentList: QueryNode[];
+}
+
+const CommunityContent: React.FC<CommunityContentProps> = ({ communityContentList }) => {
   return (
     <Section heading="Content for community 💛">
       <Text>
@@ -11,7 +16,7 @@ const CommunityContent: React.FC = () => {
       </Text>
 
       <div className="list">
-        <ContentTray />
+        <ContentTray contentList={communityContentList} />
       </div>
     </Section>
   );
