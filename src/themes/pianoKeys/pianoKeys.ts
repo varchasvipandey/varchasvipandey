@@ -24,7 +24,7 @@ const painoKeys: Theme = {
 
   fonts: {
     title: {
-      size: '4rem',
+      size: '4.8rem',
       weight: '700',
     },
     sectionHeading: {
