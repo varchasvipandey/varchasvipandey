@@ -53,6 +53,7 @@ export interface Theme {
 
   padding: {
     main: string;
+    menu: string;
   };
 
   lineHeight: {

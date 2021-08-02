@@ -1,4 +1,5 @@
 import { ImageDataLike } from 'gatsby-plugin-image';
+import * as CSS from 'csstype';
 
 export interface FrontmatterProps {
   title?: string;
@@ -14,4 +15,8 @@ export interface FrontmatterProps {
 export interface QueryNode {
   frontmatter: FrontmatterProps;
   id: string;
+}
+
+export interface StyleExtension {
+  style?: CSS.Properties;
 }

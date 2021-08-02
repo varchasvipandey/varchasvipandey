@@ -66,6 +66,7 @@ const painoKeys: Theme = {
 
   padding: {
     main: '1.2rem',
+    menu: '2.4rem',
   },
 
   lineHeight: {

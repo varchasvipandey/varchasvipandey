@@ -8,6 +8,7 @@ export default styled.main(
     background-color: ${theme.colors.background};
     border-radius: ${theme.borderRadius.canvas};
     min-height: 100vh;
+    position: relative;
 
     @media only screen and (max-width: 800px) {
       max-width: 100%;
