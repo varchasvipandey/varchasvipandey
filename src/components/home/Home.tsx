@@ -22,6 +22,7 @@ const Home: React.FC<HomeProps> = ({
   communityContentList,
   utilityProjectsList,
   entertainmentContentList,
+  projectsList,
 }) => {
   return (
     <>
@@ -35,7 +36,7 @@ const Home: React.FC<HomeProps> = ({
       <CommunityContent communityContentList={communityContentList} />
 
       {/* My side projects */}
-      {/* <SideProjects /> */}
+      <SideProjects projectsList={projectsList} />
 
       {/* My quick utility projects */}
       <UtilityProjects utilityProjectsList={utilityProjectsList} />

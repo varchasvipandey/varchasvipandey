@@ -1,7 +1,12 @@
 import { Section, Text, DetailedContent } from '../..';
 import React from 'react';
+import { QueryNode } from '../../../types';
 
-const SideProjects: React.FC = () => {
+interface SideProjectsProps {
+  projectsList: QueryNode[];
+}
+
+const SideProjects: React.FC<SideProjectsProps> = ({ projectsList }) => {
   return (
     <Section heading="My side-projects 🎦">
       <Text>
@@ -11,8 +16,13 @@ const SideProjects: React.FC = () => {
       </Text>
 
       <div className="list">
-        <DetailedContent />
-        <DetailedContent style={{ marginTop: '4.8rem' }} />
+        {projectsList.map((project: QueryNode, i: number) => (
+          <DetailedContent
+            key={project.id}
+            style={i + 1 === projectsList.length ? { marginTop: '6.2rem' } : {}}
+            content={project}
+          />
+        ))}
       </div>
     </Section>
   );

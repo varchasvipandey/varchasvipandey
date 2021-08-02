@@ -6,6 +6,9 @@ export interface FrontmatterProps {
   publishedOn?: string;
   thumb: ImageDataLike;
   url: string;
+  secondaryUrl?: string;
+  headline?: string;
+  description?: string;
 }
 
 export interface QueryNode {

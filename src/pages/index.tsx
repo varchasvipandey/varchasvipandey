@@ -24,6 +24,15 @@ export const query: Query | void = graphql`
           title
           date
           publishedOn
+          thumb {
+            childImageSharp {
+              gatsbyImageData(placeholder: BLURRED, formats: [AUTO, WEBP, AVIF])
+            }
+          }
+          url
+          secondaryUrl
+          headline
+          description
         }
         id
       }

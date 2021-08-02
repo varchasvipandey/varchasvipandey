@@ -8,11 +8,11 @@ interface DetailsContentStylesProps {
 export default styled.section(({ style }: DetailsContentStylesProps) => [
   css`
     display: flex;
-    align-items: center;
+    align-items: flex-start;
 
     .content-info {
       p:first-of-type {
-        margin: 1.2rem 0;
+        margin: 2rem 0;
       }
     }
   `,
