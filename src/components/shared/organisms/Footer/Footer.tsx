@@ -8,14 +8,15 @@ const Container = styled.footer`
   align-items: center;
   padding: 2rem;
   span {
-    margin-left: 1.2rem;
+    margin-left: 0.6rem;
+    font-size: 1.6rem;
   }
 `;
 
 const Footer: React.FC = () => {
   return (
     <Container>
-      <MutedText>developed to share</MutedText> <span>💛</span>
+      <MutedText>developed to share</MutedText> <span>💬</span>
     </Container>
   );
 };

@@ -14,11 +14,22 @@ interface LayoutProps {
 }
 
 const Layout: React.FC<LayoutProps> = ({ children, title }) => {
-  const [menuOn, setMenuOn] = React.useState<boolean>(true);
+  const [menuOn, setMenuOn] = React.useState<boolean>(false);
+  const [mountMenu, setMountMenu] = React.useState<boolean>(false);
 
   // -- Handle menu toggle
   const handleMenuToggle = (): void => {
-    setMenuOn((prev: boolean) => !prev);
+    setMenuOn((prev: boolean) => {
+      if (prev === true) {
+        // perform delayed unmount for animation
+        setTimeout(() => {
+          setMountMenu(false);
+        }, 1000);
+      } else {
+        setMountMenu(true);
+      }
+      return !prev;
+    });
   };
 
   return (
@@ -30,7 +41,7 @@ const Layout: React.FC<LayoutProps> = ({ children, title }) => {
       </Helmet>
       <Container>
         <Navbar handleMenuToggle={handleMenuToggle} />
-        {menuOn && <Menu handleMenuToggle={handleMenuToggle} />}
+        {mountMenu && <Menu handleMenuToggle={handleMenuToggle} menuOn={menuOn} />}
         <div className="main">{children}</div>
         <Footer />
       </Container>

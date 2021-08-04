@@ -18,7 +18,11 @@ const DetailedContent: React.FC<DetailedContentInterface> = ({ style, content })
       <div className="content-info">
         <SectionSubHeading>{content.frontmatter?.headline}</SectionSubHeading>
         <Text>{content.frontmatter?.description}</Text>
-        <Button variant="secondary" disabled={!content.frontmatter?.secondaryUrl}>
+        <Button
+          variant="secondary"
+          disabled={!content.frontmatter?.secondaryUrl}
+          onClick={() => window.open(content.frontmatter?.secondaryUrl)}
+        >
           View source & contribute
         </Button>
       </div>

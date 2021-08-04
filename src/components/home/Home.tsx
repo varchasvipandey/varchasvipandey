@@ -26,29 +26,43 @@ const Home: React.FC<HomeProps> = ({
 }) => {
   return (
     <>
-      {/* Intro */}
-      <Intro />
+      <div id="about-me">
+        {/* Intro */}
+        <Intro />
 
-      {/* What I do */}
-      <About />
+        {/* What I do */}
+        <About />
+      </div>
 
-      {/* JS community */}
-      <CommunityContent communityContentList={communityContentList} />
+      <div id="community-content">
+        {/* JS community */}
+        <CommunityContent communityContentList={communityContentList} />
+      </div>
 
-      {/* My side projects */}
-      <SideProjects projectsList={projectsList} />
+      <div id="side-projects">
+        {/* My side projects */}
+        <SideProjects projectsList={projectsList} />
+      </div>
 
-      {/* My quick utility projects */}
-      <UtilityProjects utilityProjectsList={utilityProjectsList} />
+      <div id="utility-projects">
+        {/* My quick utility projects */}
+        <UtilityProjects utilityProjectsList={utilityProjectsList} />
+      </div>
 
-      {/* My tech stack at glance */}
-      <TechStack />
+      <div id="tech-stack">
+        {/* My tech stack at glance */}
+        <TechStack />
+      </div>
 
-      {/* get entertained */}
-      <GetEntertained entertainmentContentList={entertainmentContentList} />
+      <div id="get-entertained">
+        {/* get entertained */}
+        <GetEntertained entertainmentContentList={entertainmentContentList} />
+      </div>
 
-      {/* get in touch */}
-      <GetInTouch />
+      <div id="connect">
+        {/* get in touch */}
+        <GetInTouch />
+      </div>
     </>
   );
 };

@@ -105,7 +105,7 @@ const TechStack: React.FC = () => {
   }, [pauseScroll]);
 
   return (
-    <Section heading="My tech stack 🔨🧰">
+    <Section heading="My tech stack 🔬">
       <Container ref={scroller} id="scroll-container">
         {techImages.map((image: any, i: number) => (
           <div
