@@ -58,7 +58,7 @@ const Layout: React.FC<LayoutProps> = ({ children, title, description }) => {
         {/*  Open graph */}
         <meta
           property="og:image"
-          content="https://varchasvipandey.gatsbyjs.io/static/03df4f5f3069203fbd6268724b439de3/65c8c/profile-512x512.avif"
+          content="https://varchasvipandey.gatsbyjs.io/profile-512x512.png"
         />
         <meta
           property="og:title"
@@ -70,8 +70,6 @@ const Layout: React.FC<LayoutProps> = ({ children, title, description }) => {
           content="Varchasvi Pandey - Web application designer & developer"
         />
         <meta property="og:description" content={description || ''} />
-        <meta property="og:image:width" content="500" />
-        <meta property="og:image:height" content="500" />
       </Helmet>
       <Container>
         <Navbar handleMenuToggle={handleMenuToggle} />
