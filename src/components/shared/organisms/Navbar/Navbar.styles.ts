@@ -23,6 +23,7 @@ export default styled.nav(
       animation: popIn 0.5s;
       animation-delay: 0.5s;
       animation-fill-mode: forwards;
+      z-index: 1;
 
       &::after {
         content: 'Let me help you!';

@@ -20,6 +20,7 @@
     "type-check": "tsc"
   },
   "dependencies": {
+    "babel-plugin-styled-components": "1.13.2",
     "csstype": "3.0.8",
     "gatsby": "3.10.2",
     "gatsby-plugin-image": "1.10.1",
