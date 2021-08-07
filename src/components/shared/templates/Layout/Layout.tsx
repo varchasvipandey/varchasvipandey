@@ -38,8 +38,40 @@ const Layout: React.FC<LayoutProps> = ({ children, title, description }) => {
       <GlobalStyle />
       <Helmet>
         {/* Page title */}
-        <title>{title || 'Varchasvi Pandey - Web designer & developer'}</title>
+        <title>{title || 'Varchasvi Pandey - Web application designer & developer'}</title>
+        <meta name="theme-color" content="#8775ed" />
         <meta name="description" content={description || ''} />
+        <meta
+          name="keywords"
+          content="web developer, frontend developer, designer, varchasvi, ui, ux, graphics designer"
+        />
+
+        {/* Twitter */}
+        <meta name="twitter:card" content="summary" />
+        <meta name="twitter:url" content="https://varchasvipandey.gatsbyjs.io" />
+        <meta
+          name="twitter:title"
+          content={title || 'Varchasvi Pandey - Web application designer & developer'}
+        />
+        <meta name="twitter:description" content={description || ''} />
+
+        {/*  Open graph */}
+        <meta
+          property="og:image"
+          content="https://varchasvipandey.gatsbyjs.io/static/03df4f5f3069203fbd6268724b439de3/65c8c/profile-512x512.avif"
+        />
+        <meta
+          property="og:title"
+          content={title || 'Varchasvi Pandey - Web application designer & developer'}
+        />
+        <meta property="og:type" content="profile" />
+        <meta
+          property="og:site_name"
+          content="Varchasvi Pandey - Web application designer & developer"
+        />
+        <meta property="og:description" content={description || ''} />
+        <meta property="og:image:width" content="500" />
+        <meta property="og:image:height" content="500" />
       </Helmet>
       <Container>
         <Navbar handleMenuToggle={handleMenuToggle} />

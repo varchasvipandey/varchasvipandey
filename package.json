@@ -1,6 +1,6 @@
 {
   "name": "varchasvi-pandey-2021",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Varchasvi Pandey portfolio 2021",
   "scripts": {
     "build": "rimraf public && npm run format && npm run lint && npm run type-check && gatsby build",

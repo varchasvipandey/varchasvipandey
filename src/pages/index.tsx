@@ -98,7 +98,7 @@ export default ({ data }: { data: any }) => {
 
   return (
     <Layout
-      title="Varchasvi Pandey - Web designer & developer"
+      title="Varchasvi Pandey - Web application designer & developer"
       description="Web application designer and developer based out of New Delhi, India. Founding team member and Front-end engineer at Alyve Health. Creating front-end architectures, designs and developing web based applications using React and TypeScript."
     >
       <Home
