@@ -15,6 +15,11 @@ export default styled.section(
         font-weight: 400;
         opacity: 0.8;
       }
+
+      & > h1 {
+        margin: 0.4rem 0;
+      }
+
       &__profession {
         font-size: 2.2rem;
         font-weight: 400;
@@ -29,6 +34,11 @@ export default styled.section(
       display: flex;
       align-items: center;
 
+      @media only screen and (max-width: ${theme.breakpoints.tabletPT}) {
+        flex-direction: column;
+        width: 100%;
+      }
+
       &__image {
         border-radius: 50%;
         img {
@@ -36,6 +46,13 @@ export default styled.section(
           width: 12rem;
         }
         transform: translateX(2.4rem);
+
+        @media only screen and (max-width: ${theme.breakpoints.tabletPT}) {
+          transform: translateX(0) translateY(2.4rem);
+          img {
+            width: 16rem;
+          }
+        }
       }
 
       &__content {
@@ -43,6 +60,14 @@ export default styled.section(
         padding: 4rem 4rem 4rem 8rem;
         border-radius: 8rem 2rem 2rem 8rem;
         transform: translateX(-2.4rem);
+
+        @media only screen and (max-width: ${theme.breakpoints.tabletPT}) {
+          border-radius: 2rem;
+          padding: 2rem 2rem 0 2rem;
+          transform: translateX(0);
+          box-shadow: none;
+          margin-top: 2.4rem;
+        }
       }
     }
   `,

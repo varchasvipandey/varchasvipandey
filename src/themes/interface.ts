@@ -42,8 +42,6 @@ export interface Theme {
     dark: string;
   };
 
-  maxWidth: string; // maximum width of the content area
-
   borderRadius: {
     canvas: string; // main view radius
     section: string; // section radius
@@ -58,6 +56,17 @@ export interface Theme {
 
   lineHeight: {
     paragraph: string;
+  };
+
+  maxWidth: string; // maximum width of the content area
+
+  /* Break points */
+  breakpoints: {
+    desktop: string;
+    tabletLS: string;
+    tabletPT: string;
+    mobile: string;
+    mobileSlim: string;
   };
 }
 

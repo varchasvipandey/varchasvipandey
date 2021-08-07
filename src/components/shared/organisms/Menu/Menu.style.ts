@@ -37,8 +37,10 @@ export const Container = styled.aside(({ theme, style }: StyledComponentProps) =
         margin: 0 auto;
         margin-top: 2rem;
         display: flex;
+        min-height: 80vh;
         flex-direction: column;
         align-items: center;
+        justify-content: center;
       }
     }
 

@@ -31,5 +31,33 @@ export default createGlobalStyle(
         padding: 0;
       }
     }
+
+    /* Media queries */
+
+    @media only screen and (max-width: ${theme.breakpoints.desktop}) {
+      html {
+        font-size: 60%;
+      }
+    }
+    @media only screen and (max-width: ${theme.breakpoints.tabletLS}) {
+      html {
+        font-size: 59.2%;
+      }
+    }
+    @media only screen and (max-width: ${theme.breakpoints.tabletPT}) {
+      html {
+        font-size: 58%;
+      }
+    }
+    @media only screen and (max-width: ${theme.breakpoints.mobile}) {
+      html {
+        font-size: 56%;
+      }
+    }
+    @media only screen and (max-width: ${theme.breakpoints.mobileSlim}) {
+      html {
+        font-size: 40%;
+      }
+    }
   `,
 );

@@ -39,6 +39,10 @@ export const Image = styled.img(
     cursor: pointer;
     filter: drop-shadow(${theme.boxShadow.light});
     transition: all 0.2s;
+
+    @media only screen and (max-width: ${theme.breakpoints.mobile}) {
+      width: 6.4rem;
+    }
   `,
 );
 

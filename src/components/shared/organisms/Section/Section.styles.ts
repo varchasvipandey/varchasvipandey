@@ -28,6 +28,22 @@ export default styled.section(({ theme, style, flatBody = false }: SectionContai
         margin-top: 3.6rem;
       }
     }
+
+    @media only screen and (max-width: ${theme.breakpoints.desktop}) {
+      padding: 0 6.4rem;
+    }
+    @media only screen and (max-width: ${theme.breakpoints.tabletLS}) {
+      padding: 0 5.6rem;
+    }
+    @media only screen and (max-width: ${theme.breakpoints.tabletPT}) {
+      padding: 0rem;
+      .content {
+        box-shadow: none;
+        margin-top: 0;
+      }
+    }
+    @media only screen and (max-width: ${theme.breakpoints.mobile}) {
+    }
   `,
   { ...style },
 ]);

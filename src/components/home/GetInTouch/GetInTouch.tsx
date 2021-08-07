@@ -54,7 +54,7 @@ const GetInTouch: React.FC = () => {
     <Section heading="Get in touch 🤵" flatBody={true}>
       <Container>
         {contactList.map((contact) => (
-          <ContactCard key={contact.id} contact={contact} style={{ flex: '0 0 45%' }} />
+          <ContactCard key={contact.id} contact={contact} />
         ))}
       </Container>
     </Section>

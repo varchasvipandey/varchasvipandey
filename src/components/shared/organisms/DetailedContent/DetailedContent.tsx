@@ -13,18 +13,20 @@ const DetailedContent: React.FC<DetailedContentInterface> = ({ style, content })
   return (
     <Container style={style}>
       <div className="content-card">
-        <ContentCard style={{ marginRight: '2rem' }} content={content} />
+        <ContentCard content={content} />
       </div>
       <div className="content-info">
         <SectionSubHeading>{content.frontmatter?.headline}</SectionSubHeading>
         <Text>{content.frontmatter?.description}</Text>
-        <Button
-          variant="secondary"
-          disabled={!content.frontmatter?.secondaryUrl}
-          onClick={() => window.open(content.frontmatter?.secondaryUrl)}
-        >
-          View source & contribute
-        </Button>
+        <div className="content-info__button">
+          <Button
+            variant="secondary"
+            disabled={!content.frontmatter?.secondaryUrl}
+            onClick={() => window.open(content.frontmatter?.secondaryUrl)}
+          >
+            View source & contribute
+          </Button>
+        </div>
       </div>
     </Container>
   );

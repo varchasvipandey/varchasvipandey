@@ -55,8 +55,6 @@ const painoKeys: Theme = {
     dark: '3px 6px 10px rgba(0,0,0,0.2)',
   },
 
-  maxWidth: '970px',
-
   borderRadius: {
     canvas: '2rem',
     section: '2rem',
@@ -71,6 +69,17 @@ const painoKeys: Theme = {
 
   lineHeight: {
     paragraph: '3.2rem',
+  },
+
+  maxWidth: '970px',
+
+  /* Break points */
+  breakpoints: {
+    desktop: '1200px',
+    tabletLS: '720px',
+    tabletPT: '640px',
+    mobile: '460px',
+    mobileSlim: '360px',
   },
 };
 

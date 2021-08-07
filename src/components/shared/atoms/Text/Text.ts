@@ -11,6 +11,10 @@ export const Title = styled.h1(({ theme, style }: CustomStyledComponents) => [
     font-size: ${theme.fonts.title.size};
     font-weight: ${theme.fonts.title.weight};
     color: ${theme.colors.text.title};
+
+    @media only screen and (max-width: ${theme.breakpoints.mobileSlim}) {
+      font-size: ${theme.fonts.sectionHeading.size};
+    }
   `,
   { ...style },
 ]);
