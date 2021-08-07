@@ -49,7 +49,7 @@ export default styled.section(
         @media only screen and (max-width: ${theme.breakpoints.tabletPT}) {
           transform: translateX(0) translateY(2.4rem);
           img {
-            width: 16rem;
+            width: 24rem;
           }
         }
       }
@@ -65,7 +65,7 @@ export default styled.section(
           padding: 2rem 2rem 0 2rem;
           transform: translateX(0);
           box-shadow: none;
-          margin-top: 2.4rem;
+          margin-top: 4.8rem;
         }
       }
     }

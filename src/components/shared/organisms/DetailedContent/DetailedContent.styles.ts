@@ -24,6 +24,7 @@ export default styled.section(({ style, theme }: StyledComponentProps) => [
         @media only screen and (max-width: ${theme.breakpoints.mobile}) {
           width: 100%;
           height: 24rem;
+          margin-right: 0;
         }
       }
     }
