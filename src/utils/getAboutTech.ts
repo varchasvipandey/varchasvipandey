@@ -18,11 +18,17 @@ const getAboutTech = (tech: string): string => {
     case 'nextjs':
       return 'If React is Poliwhirl and Gatsby is Poliwrath, Next is definitely Politoed. I think that makes JS Poliwag...🤔. I am still learning to deal with my Politoed, meanwhile you can copy paste this link - bit.ly/WTH_He_Just_Said';
 
+    case 'graphql':
+      return "Started working with GraphQL along with Gatsby while creating this portfolio. I think now I don't have to REST..";
+
     case 'postgresql':
       return 'After working with NoSQL for an year, I decided to bring some structure in my life. Since 2020, PostgreSQL became my go to database for storing all my secrets.';
 
     case 'firebase':
       return 'Most of my quickest applications are built on Firebase. Firebase never really gave me a chance to miss MongoDB. Since 2020, Firebase has been my Mongoose with some fancy modifications.';
+
+    case 'sass':
+      return 'Styling can be complicated, so is SASS. But trust me, nested complications are still better. Since 2019, I am able to chain all my styles.';
 
     case 'github':
       return "Yes, I know how to use GitHub. Pretty strange for a developer, isn't it?";

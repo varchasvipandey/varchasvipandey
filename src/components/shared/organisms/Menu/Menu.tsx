@@ -22,7 +22,7 @@ const Menu: React.FC<MenuProps> = ({ handleMenuToggle, menuOn }) => {
       <div className="container">
         {/* Close icon */}
         <div className="close">
-          <img src="./corss-outline-white.svg" alt="" onClick={() => handleMenuToggle()} />
+          <img src="./assets/corss-outline-white.svg" alt="" onClick={() => handleMenuToggle()} />
         </div>
 
         {/* Options */}

@@ -2,25 +2,34 @@ import Container from './Intro.styles';
 import { Title, Text } from '../..';
 import React from 'react';
 import { graphql, useStaticQuery } from 'gatsby';
+import { getImage, GatsbyImage } from 'gatsby-plugin-image';
 
 const Intro: React.FC = () => {
   const {
     site: {
-      siteMetadata: { author, intro, profileImageUrl, greetings, profession },
+      siteMetadata: { author, intro, greetings, profession },
     },
+    profileImage,
   } = useStaticQuery(graphql`
     query Intro {
       site {
         siteMetadata {
           author
           intro
-          profileImageUrl
           greetings
           profession
         }
       }
+
+      profileImage: file(dir: { regex: "/images/profile/" }, name: { eq: "profile-512x512" }) {
+        childImageSharp {
+          gatsbyImageData(placeholder: BLURRED, formats: [AUTO, WEBP, AVIF])
+        }
+      }
     }
   `);
+
+  const profileImageUrl = getImage(profileImage);
 
   return (
     <Container>
@@ -32,7 +41,7 @@ const Intro: React.FC = () => {
 
       <div className="intro-card">
         <div className="intro-card__image">
-          <img src={profileImageUrl} alt="" />
+          {profileImageUrl && <GatsbyImage image={profileImageUrl} alt="Varchasvi Pandey" />}
         </div>
         <div className="intro-card__content">
           <Text>{intro}</Text>

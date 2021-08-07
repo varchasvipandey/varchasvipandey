@@ -41,11 +41,10 @@ export default styled.section(
 
       &__image {
         border-radius: 50%;
+        transform: translateX(2.4rem);
         img {
           border-radius: 50%;
-          width: 12rem;
         }
-        transform: translateX(2.4rem);
 
         @media only screen and (max-width: ${theme.breakpoints.tabletPT}) {
           transform: translateX(0) translateY(2.4rem);

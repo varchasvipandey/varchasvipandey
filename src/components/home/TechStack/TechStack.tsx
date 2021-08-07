@@ -42,12 +42,22 @@ const TechStack: React.FC = () => {
         publicURL
         name
       }
+      graphql: file(dir: { regex: "/images/techStack/" }, name: { eq: "graphql" }) {
+        id
+        publicURL
+        name
+      }
       postgresql: file(dir: { regex: "/images/techStack/" }, name: { eq: "postgresql" }) {
         id
         publicURL
         name
       }
       firebase: file(dir: { regex: "/images/techStack/" }, name: { eq: "firebase" }) {
+        id
+        publicURL
+        name
+      }
+      sass: file(dir: { regex: "/images/techStack/" }, name: { eq: "sass" }) {
         id
         publicURL
         name
