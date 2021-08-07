@@ -97,7 +97,10 @@ export default ({ data }: { data: any }) => {
   const projectsList: QueryNode[] = data.projects.nodes;
 
   return (
-    <Layout title="Varchasvi Pandey">
+    <Layout
+      title="Varchasvi Pandey - Web designer & developer"
+      description="Web application designer and developer based out of New Delhi, India. Founding team member and Front-end engineer at Alyve Health. Creating front-end architectures, designs and developing web based applications using React and TypeScript."
+    >
       <Home
         communityContentList={communityContentList}
         projectsList={projectsList}

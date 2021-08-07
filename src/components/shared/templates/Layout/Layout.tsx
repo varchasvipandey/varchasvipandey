@@ -11,9 +11,10 @@ import { Helmet } from 'react-helmet';
 interface LayoutProps {
   children: React.ReactNode;
   title?: string;
+  description?: string;
 }
 
-const Layout: React.FC<LayoutProps> = ({ children, title }) => {
+const Layout: React.FC<LayoutProps> = ({ children, title, description }) => {
   const [menuOn, setMenuOn] = React.useState<boolean>(false);
   const [mountMenu, setMountMenu] = React.useState<boolean>(false);
 
@@ -37,7 +38,8 @@ const Layout: React.FC<LayoutProps> = ({ children, title }) => {
       <GlobalStyle />
       <Helmet>
         {/* Page title */}
-        {!!title && <title>{title}</title>}
+        <title>{title || 'Varchasvi Pandey - Web designer & developer'}</title>
+        <meta name="description" content={description || ''} />
       </Helmet>
       <Container>
         <Navbar handleMenuToggle={handleMenuToggle} />
