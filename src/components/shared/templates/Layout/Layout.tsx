@@ -48,7 +48,7 @@ const Layout: React.FC<LayoutProps> = ({ children, title, description }) => {
 
         {/* Twitter */}
         <meta name="twitter:card" content="summary" />
-        <meta name="twitter:url" content="https://varchasvipandey.gatsbyjs.io" />
+        <meta name="twitter:url" content="https://varchasvipandey.com" />
         <meta
           name="twitter:title"
           content={title || 'Varchasvi Pandey - Web application designer & developer'}
@@ -56,10 +56,7 @@ const Layout: React.FC<LayoutProps> = ({ children, title, description }) => {
         <meta name="twitter:description" content={description || ''} />
 
         {/*  Open graph */}
-        <meta
-          property="og:image"
-          content="https://varchasvipandey.gatsbyjs.io/profile-512x512.png"
-        />
+        <meta property="og:image" content="https://varchasvipandey.com/profile-512x512.png" />
         <meta
           property="og:title"
           content={title || 'Varchasvi Pandey - Web application designer & developer'}
