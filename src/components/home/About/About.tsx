@@ -7,10 +7,10 @@ const About: React.FC = () => {
     <Section heading="What I do? 👨‍💻">
       <Container>
         <Text>
-          I am a part of a highly energetic & motivated team devoting all its time making healthcare
-          system more reliable and friendly. At <span className="brand">Alyve Health</span>, we
-          believe that health always comes first. We are on a mission, a mission to care and be by
-          your side at each step.
+          I am a part of a highly energetic & motivated team devoting all its time to making the
+          healthcare system more reliable and friendly. At{' '}
+          <span className="brand">Alyve Health</span>, we believe that health always comes first. We
+          are on a mission, a mission to care and be by your side at each step.
         </Text>
 
         <div className="cta">

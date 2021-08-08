@@ -11,7 +11,7 @@ const SideProjects: React.FC<SideProjectsProps> = ({ projectsList }) => {
     <Section heading="My side-projects 🎦">
       <Text>
         {
-          'Taking time out for developing useful application always feels good. Here is a list of some of my best side-projects.'
+          'Taking time out for developing useful applications always feels good. Here is a list of some of my best side-projects.'
         }
       </Text>
 

@@ -11,7 +11,7 @@ const GetEntertained: React.FC<GetEntertainedProps> = ({ entertainmentContentLis
     <Section heading="Get entertained! 🎶">
       <Text>
         {
-          "I  make fun musical content on Instagram and YouTube. I've been producing music since the last 4 years. Music keeps me active, music keeps me going & I love delivering the same in my style."
+          "I make fun musical content on Instagram and YouTube. I've been producing music for the last four years. Music keeps me active, music keeps me going & I love delivering the same in my style."
         }
       </Text>
 

@@ -1,96 +1,44 @@
-<p align="center">
-  <a href="https://www.gatsbyjs.org">
-    <img alt="Gatsby" src="https://www.gatsbyjs.org/monogram.svg" width="60" />
-  </a>
-</p>
-<h1 align="center">
-  Typescript Starter with the bare essentials needed for a Gatsby site
-</h1>
+## [About me][website]
 
-## 🚀 Quick start
+I am a web application designer and developer based out of New Delhi, India. I am Founding team member and Front-end engineer at [Alyve Health][alyvehealth]. I Spend most of my time creating front-end architectures, designs and developing web based applications using React and TypeScript.
 
-1.  **Create a Gatsby site.**
+<br/>
 
-    Use the Gatsby CLI to create a new site, specifying the hello-world starter.
+### Things that I am good with
 
-    ```sh
-    # create a new Gatsby site using the hello-world starter
-    gatsby new my-hello-world-starter https://github.com/hdorgeval/gatsby-starter-ts-hello-world
-    ```
+1. JavaScript and TypeScript
+2. React and its awesome libraries Gatsby and Next
+3. Writing modern web applications
+4. UI/UX designing and prototyping with Adobe XD
+5. Firebase, REST and GraphQL
+6. MongoDB & PostgreSQL
+7. Playing keyboard 🎹, composing and producing music
+8. Making people happy 😄 (Most important)
 
-1.  **Start developing.**
+<br/>
 
-    Navigate into your new site’s directory and start it up.
+### Get in touch or  know more about me and my work
 
-    ```sh
-    cd my-hello-world-starter/
-    npm start
-    ```
+1. [Visit my website][website]
+2. [Connect with me on LinkedIn][linkedin]
+3. [Music I used to produce for people][youtube-alt]
+4. [Listen to my music on YouTube][youtube]
+5. [Fun musical content on Instagram][instagram]
+6. [Download Alyve Health app for Health Ensurance][alyvehealthapp]
 
-1.  **Open the source code and start editing!**
+<br/><br/>
 
-    Your site is now running at `http://localhost:8000`!
+### GitHub stats
 
-    _Note: You'll also see a second link: _`http://localhost:8000/___graphql`_. This is a tool you can use to experiment with querying your data. Learn more about using this tool in the [Gatsby tutorial](https://www.gatsbyjs.org/tutorial/part-five/#introducing-graphiql)._
+Please scroll down to see contribution heat map graph. You can also check following and followers list on the left hand panel 🙂. I mean, why to add a donut graph here..
 
-    Open the `my-hello-world-starter` directory in your code editor of choice and edit `src/pages/index.tsx`. Save your changes and the browser will update in real time!
 
-## 🎓 Learning Gatsby
 
-Looking for more guidance? Full documentation for Gatsby lives [on the website](https://www.gatsbyjs.org/). Here are some places to start:
+[website]: https://varchasvipandey.com
+[instagram]: https://instagram.com/varchasvipandey
+[linkedin]: https://linkedin.com/in/varchasvipandey
+[youtube]: https://www.youtube.com/channel/UCGEPRddJ65mk0zS8t1mdHCg
+[youtube-alt]: https://youtube.com/varchasvmelodies
+[alyvehealth]: https://alyve.health
+[alyvehealthapp]: https://programs.alyve.health/download-app
 
-- **For most developers, we recommend starting with our [in-depth tutorial for creating a site with Gatsby](https://www.gatsbyjs.org/tutorial/).** It starts with zero assumptions about your level of ability and walks through every step of the process.
-
-- **To dive straight into code samples, head [to our documentation](https://www.gatsbyjs.org/docs/).** In particular, check out the _Guides_, _API Reference_, and _Advanced Tutorials_ sections in the sidebar.
-
-## CSS file usage
-
-Run script:
-
-```sh
-npm run css-watch
-```
-
-This will automatically create/update a `.d.ts` typings file whenever you add or modify a `.css` file.
-
-This will enable you to import `.css` file in any `.tsx` file, like for example:
-
-```sh
-import styles from './index.module.css';
-```
-
-Plus added support of IntelliSense in VSCode ;
-
-To update/create all `.css.d.ts` files in one shot:
-
-```sh
-npm run create-types-for-css-modules
-```
-
-## SASS file usage
-
-Run script:
-
-```sh
-npm run sass-watch
-```
-
-This will automatically create/update a `.d.ts` typings file whenever you add or modify a `.scss` file.
-
-This will enable you to import `.scss` file in any `.tsx` file, like for example:
-
-```sh
-import styles from './index.module.scss';
-```
-
-Plus added support of IntelliSense in VSCode ;
-
-To update/create all `.scss.d.ts` files in one shot:
-
-```sh
-npm run create-types-for-sass-modules
-```
-
-## 💫 Deploy
-
-[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/hdorgeval/gatsby-starter-ts-hello-world)

@@ -56,7 +56,7 @@ module.exports = {
     copyright: '2021 Varchasvi Pandey',
     author: 'Varchasvi Pandey',
     intro:
-      'From writing UI architectures on a piece of paper to building full-fledged web-applications is what defines me. I work with leading web technologies and designing tools all day, every day to make thoughtful applications. 💻',
+      'From writing UI architectures on a piece of paper to building full-fledged web applications is what defines me. I work with leading web technologies and designing tools all day every day to make thoughtful applications. 💻',
     greetings: 'Hi there 👋, I am',
     profession: 'Web application designer & developer',
     footnote: 'developed to share ❤ ',
