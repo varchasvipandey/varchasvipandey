@@ -50,6 +50,14 @@ module.exports = {
         path: `${__dirname}/src/images/`,
       },
     },
+    {
+      resolve: `gatsby-plugin-google-analytics`,
+      options: {
+        trackingId: process.env.REACT_APP_GOOGLE_ANALYTICS_ID,
+        head: false,
+        enableWebVitalsTracking: true,
+      },
+    },
   ],
   siteMetadata: {
     title: 'Varchasvi Pandey',

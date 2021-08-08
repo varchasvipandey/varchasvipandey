@@ -1,4 +1,5 @@
 import React from 'react';
+import { OutboundLink } from 'gatsby-plugin-google-analytics';
 import Container from './ContactCard.style';
 import { LinkText } from '../..';
 import * as CSS from 'csstype';
@@ -18,14 +19,14 @@ interface ContactCardProps {
 const ContactCard: React.FC<ContactCardProps> = ({ contact: { icon, url, label }, style = {} }) => {
   return (
     <Container style={style}>
-      <a href={url} target="_blank" className="link">
+      <OutboundLink href={url} target="_blank" className="link">
         <div className="link__icon">
           <img src={icon} alt={label} />
         </div>
         <div className="link__label">
           <LinkText>{label}</LinkText>
         </div>
-      </a>
+      </OutboundLink>
     </Container>
   );
 };

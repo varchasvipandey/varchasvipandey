@@ -1,4 +1,5 @@
 import Container from './ContentCard.styles';
+import { OutboundLink } from 'gatsby-plugin-google-analytics';
 import { SectionSubHeading } from '../..';
 import React from 'react';
 import * as CSS from 'csstype';
@@ -26,9 +27,9 @@ const LinkContainer: React.FC<LinkContainerProps> = ({ children, url }) => {
     );
   else
     return (
-      <a href={url} target="_blank" style={linkStyle}>
+      <OutboundLink href={url} target="_blank" style={linkStyle}>
         {children}
-      </a>
+      </OutboundLink>
     );
 };
 
