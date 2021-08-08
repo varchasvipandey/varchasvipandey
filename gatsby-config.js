@@ -54,7 +54,7 @@ module.exports = {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
         trackingId: process.env.REACT_APP_GOOGLE_ANALYTICS_ID,
-        head: false,
+        head: true,
         enableWebVitalsTracking: true,
       },
     },
