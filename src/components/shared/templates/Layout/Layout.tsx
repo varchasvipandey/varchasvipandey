@@ -1,8 +1,9 @@
 import Container from './Layout.styles';
 import { Navbar, Footer, Menu } from '../..';
 import GlobalStyle from '../../../../styles/GlobalStyle';
-import { pianoKeys } from '../../../../themes';
 import { ThemeProvider } from 'styled-components';
+import { getSelectedTheme, selectNextTheme } from '../../../../utils/themeHandler';
+import { Theme } from '../../../../themes/interface';
 
 import React from 'react';
 
@@ -17,6 +18,7 @@ interface LayoutProps {
 const Layout: React.FC<LayoutProps> = ({ children, title, description }) => {
   const [menuOn, setMenuOn] = React.useState<boolean>(false);
   const [mountMenu, setMountMenu] = React.useState<boolean>(false);
+  const [selectedTheme, setSelectedTheme] = React.useState<Theme>(getSelectedTheme());
 
   // -- Handle menu toggle
   const handleMenuToggle = (): void => {
@@ -33,8 +35,13 @@ const Layout: React.FC<LayoutProps> = ({ children, title, description }) => {
     });
   };
 
+  // -- Handle theme switch
+  const handleThemeSwitch = (): void => {
+    setSelectedTheme(selectNextTheme());
+  };
+
   return (
-    <ThemeProvider theme={pianoKeys}>
+    <ThemeProvider theme={selectedTheme}>
       <GlobalStyle />
       <Helmet>
         {/* Page title */}
@@ -70,7 +77,13 @@ const Layout: React.FC<LayoutProps> = ({ children, title, description }) => {
       </Helmet>
       <Container>
         <Navbar handleMenuToggle={handleMenuToggle} />
-        {mountMenu && <Menu handleMenuToggle={handleMenuToggle} menuOn={menuOn} />}
+        {mountMenu && (
+          <Menu
+            handleMenuToggle={handleMenuToggle}
+            menuOn={menuOn}
+            handleThemeSwitch={handleThemeSwitch}
+          />
+        )}
         <div className="main">{children}</div>
         <Footer />
       </Container>

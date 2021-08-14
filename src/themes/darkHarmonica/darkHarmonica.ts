@@ -1,29 +1,29 @@
 import { Theme } from '../interface';
 
-const painoKeys: Theme = {
-  id: 0,
-  name: 'Piano Keys',
+const darkHarmonica: Theme = {
+  id: 1,
+  name: 'Dark Harmonica',
 
   colors: {
     primary: '#8775ed',
     primaryDark: '#4848b6',
 
-    background: '#fefefe',
-    section: '#fefefe',
+    background: '#323232',
+    section: '#323232',
 
     text: {
-      title: '#333',
-      sectionHeading: '#333',
-      sectionSubHeading: '#666',
-      sectionText: '#666',
-      link: '#666',
-      menu: '#fefefe',
-      mutedText: '#999',
+      title: '#eee',
+      sectionHeading: '#eee',
+      sectionSubHeading: '#ddd',
+      sectionText: '#ddd',
+      link: '#ccc',
+      menu: '#eee',
+      mutedText: '#ccc',
     },
   },
 
   gradients: {
-    primary: 'linear-gradient(to bottom right, #4848b6, #8775ed 80%)',
+    primary: 'linear-gradient(to bottom right, #222, #333 80%)',
   },
 
   fonts: {
@@ -87,4 +87,4 @@ const painoKeys: Theme = {
   },
 };
 
-export default painoKeys;
+export default darkHarmonica;

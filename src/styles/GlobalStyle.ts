@@ -13,6 +13,7 @@ export default createGlobalStyle(
       margin: 0;
       padding: 0;
       border-spacing: border-box;
+      transition: background 0.5s color 1s;
     }
 
     html {

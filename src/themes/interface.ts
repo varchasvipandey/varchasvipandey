@@ -6,6 +6,9 @@ export interface Font {
 }
 
 export interface Theme {
+  id: number;
+  name: string;
+
   colors: {
     primary: string;
     primaryDark: string;
@@ -19,6 +22,7 @@ export interface Theme {
       sectionSubHeading: string;
       sectionText: string;
       link: string;
+      menu: string;
       mutedText: string;
     };
   };

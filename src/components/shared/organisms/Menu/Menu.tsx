@@ -4,6 +4,7 @@ import { Container, Option } from './Menu.style';
 interface MenuProps {
   handleMenuToggle: Function;
   menuOn: boolean;
+  handleThemeSwitch: Function;
 }
 
 const MENU_ITEMS = [
@@ -16,13 +17,32 @@ const MENU_ITEMS = [
   { label: 'Connect', href: '#connect' },
 ];
 
-const Menu: React.FC<MenuProps> = ({ handleMenuToggle, menuOn }) => {
+const Menu: React.FC<MenuProps> = ({ handleMenuToggle, menuOn, handleThemeSwitch }) => {
+  const [swappedTheme, setSwappedTheme] = React.useState<boolean>(false);
+
+  const handleThemeSwitchWithAnimation = (): void => {
+    handleThemeSwitch();
+    setSwappedTheme((prev) => !prev);
+  };
+
   return (
     <Container style={!menuOn ? { animation: 'fadeOut 1s' } : {}}>
       <div className="container">
-        {/* Close icon */}
-        <div className="close">
-          <img src="./assets/corss-outline-white.svg" alt="" onClick={() => handleMenuToggle()} />
+        <div className="actions">
+          {/* Themes */}
+          <div className="actions__theme-switch" onClick={handleThemeSwitchWithAnimation}>
+            <img
+              src="./assets/theme-swapped.svg"
+              alt="default theme"
+              loading="lazy"
+              style={swappedTheme ? { transform: 'rotate(180deg)' } : {}}
+            />
+          </div>
+
+          {/* Close icon */}
+          <div className="actions__close" onClick={() => handleMenuToggle()}>
+            <img src="./assets/corss-outline-white.svg" alt="close" loading="lazy" />
+          </div>
         </div>
 
         {/* Options */}

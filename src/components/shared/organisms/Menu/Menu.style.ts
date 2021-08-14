@@ -18,16 +18,36 @@ export const Container = styled.aside(({ theme, style }: StyledComponentProps) =
       padding: ${theme.padding.menu};
       height: 100%;
 
-      .close {
+      .actions {
         display: flex;
-        justify-content: flex-end;
-        img {
-          width: 2.4rem;
-          transform: translateX(200%) rotate(360deg) scale(0.8);
-          animation: rotateAndEnter 0.5s;
-          animation-delay: 0.5s;
-          animation-fill-mode: forwards;
-          cursor: pointer;
+        align-items: center;
+        justify-content: space-between;
+
+        &__theme-switch {
+          user-select: none;
+          img {
+            opacity: 0;
+            width: 3.2rem;
+            cursor: pointer;
+            animation: fadeIn 2s;
+            animation-delay: 0.5s;
+            animation-fill-mode: forwards;
+            transition: all 0.3s;
+          }
+        }
+
+        &__close {
+          display: flex;
+          justify-content: flex-end;
+          user-select: none;
+          img {
+            width: 2.4rem;
+            transform: translateX(200%) rotate(360deg) scale(0.8);
+            animation: rotateAndEnter 0.5s;
+            animation-delay: 0.5s;
+            animation-fill-mode: forwards;
+            cursor: pointer;
+          }
         }
       }
 
@@ -59,6 +79,15 @@ export const Container = styled.aside(({ theme, style }: StyledComponentProps) =
       }
     }
 
+    @keyframes fadeIn {
+      0% {
+        opacity: 0;
+      }
+      100% {
+        opacity: 100%;
+      }
+    }
+
     @keyframes fadeOut {
       100% {
         opacity: 0;
@@ -76,7 +105,7 @@ export const Option = styled.a(
   ({ theme, animationDelay }: OptionProps) => css`
     text-decoration: none;
     font-size: ${theme.fonts.sectionHeading.size};
-    color: ${theme.colors.background};
+    color: ${theme.colors.text.menu};
     margin-top: 2.4rem;
     cursor: pointer;
     transition: all 0.2s;
@@ -96,7 +125,7 @@ export const Option = styled.a(
       opacity: 0;
       width: 0%;
       height: 2px;
-      background-color: ${theme.colors.background};
+      background-color: ${theme.colors.text.menu};
       bottom: -16%;
       transition: all 0.5s cubic-bezier(1, 0.06, 0.43, -0.03);
     }
