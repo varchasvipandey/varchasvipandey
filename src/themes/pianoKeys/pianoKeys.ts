@@ -17,13 +17,15 @@ const painoKeys: Theme = {
       sectionSubHeading: '#666',
       sectionText: '#666',
       link: '#666',
-      menu: '#fefefe',
+      // menu: '#fefefe',
+      menu: '#000080',
       mutedText: '#999',
     },
   },
 
   gradients: {
-    primary: 'linear-gradient(to bottom right, #4848b6, #8775ed 80%)',
+    // primary: 'linear-gradient(to bottom right, #4848b6, #8775ed 80%)',
+    primary: 'linear-gradient(160deg, #FF9933, #FFFFFF, #138808)',
   },
 
   fonts: {
