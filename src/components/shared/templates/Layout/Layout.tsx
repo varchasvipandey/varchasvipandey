@@ -1,4 +1,3 @@
-import { useLayoutEffect } from 'react';
 import Container from './Layout.styles';
 import { Navbar, Footer, Menu } from '../..';
 import GlobalStyle from '../../../../styles/GlobalStyle';
@@ -36,14 +35,10 @@ const Layout: React.FC<LayoutProps> = ({ children, title, description }) => {
     });
   };
 
-  // -- Handle theme switch
+  // ! Handle theme switch (NOT IN USE)
   const handleThemeSwitch = (): void => {
     setSelectedTheme(selectNextTheme());
   };
-
-  useLayoutEffect(() => {
-    setSelectedTheme(getSelectedTheme());
-  }, []);
 
   return (
     <ThemeProvider theme={selectedTheme}>

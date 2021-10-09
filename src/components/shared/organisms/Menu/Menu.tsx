@@ -17,26 +17,26 @@ const MENU_ITEMS = [
   { label: 'Connect', href: '#connect' },
 ];
 
-const Menu: React.FC<MenuProps> = ({ handleMenuToggle, menuOn, handleThemeSwitch }) => {
-  const [swappedTheme, setSwappedTheme] = React.useState<boolean>(false);
+const Menu: React.FC<MenuProps> = ({ handleMenuToggle, menuOn }) => {
+  // const [swappedTheme, setSwappedTheme] = React.useState<boolean>(false);
 
-  const handleThemeSwitchWithAnimation = (): void => {
+  /*   const handleThemeSwitchWithAnimation = (): void => {
     handleThemeSwitch();
     setSwappedTheme((prev) => !prev);
-  };
+  }; */
 
   return (
     <Container style={!menuOn ? { animation: 'fadeOut 1s' } : {}}>
       <div className="container">
         <div className="actions">
           {/* Themes */}
-          <div className="actions__theme-switch" onClick={handleThemeSwitchWithAnimation}>
-            <img
+          <div className="actions__theme-switch" /* onClick={handleThemeSwitchWithAnimation} */>
+            {/* <img
               src="./assets/theme-swapped.svg"
               alt="default theme"
               loading="lazy"
               style={swappedTheme ? { transform: 'rotate(180deg)' } : {}}
-            />
+            /> */}
           </div>
 
           {/* Close icon */}
