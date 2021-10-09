@@ -1,5 +1,6 @@
 import { pianoKeys, darkHarmonica } from '../themes';
 import { Theme } from '../themes/interface';
+import Cookies from 'js-cookie';
 
 import { LOCAL_DB_THEME_ID } from './constants';
 
@@ -7,7 +8,7 @@ export const themesList = [pianoKeys, darkHarmonica];
 
 export const getSelectedTheme = (): Theme => {
   if (typeof window !== 'undefined') {
-    const selectedThemeId: string | null = localStorage.getItem(LOCAL_DB_THEME_ID);
+    const selectedThemeId: string | undefined = Cookies.get(LOCAL_DB_THEME_ID);
 
     if (selectedThemeId) {
       const selectedTheme = themesList.filter((theme) => +theme.id === +selectedThemeId);
@@ -21,7 +22,7 @@ export const getSelectedTheme = (): Theme => {
 export const selectTheme = (themeId: number): boolean => {
   if (typeof window !== 'undefined') {
     if (!isNaN(+themeId)) {
-      localStorage.setItem(LOCAL_DB_THEME_ID, themeId.toString());
+      Cookies.set(LOCAL_DB_THEME_ID, themeId.toString());
       return true;
     }
   }
@@ -31,7 +32,7 @@ export const selectTheme = (themeId: number): boolean => {
 
 export const selectNextTheme = (): Theme => {
   if (typeof window !== 'undefined') {
-    const selectedThemeId: string | null = localStorage.getItem(LOCAL_DB_THEME_ID);
+    const selectedThemeId: string | undefined = Cookies.get(LOCAL_DB_THEME_ID);
 
     // if no theme data in local, set theme id to default + 1 = 1
     const nextThemeId = selectedThemeId ? +selectedThemeId + 1 : 1;
