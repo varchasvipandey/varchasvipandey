@@ -36,9 +36,16 @@ const Container = styled.main(
         margin: 2rem 2rem 3.2rem 2rem;
       }
 
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
       &__date {
         font-size: 1.2rem;
         font-weight: 600;
+      }
+
+      &__actions {
       }
     }
 
@@ -81,6 +88,16 @@ const Container = styled.main(
           width: 100%;
           max-width: 600px;
         }
+      }
+    }
+
+    .footer {
+      margin: 2rem 4rem;
+      display: flex;
+      justify-content: flex-end;
+
+      @media only screen and (max-width: ${theme.breakpoints.mobile}) {
+        margin: 2rem;
       }
     }
   `,

@@ -37,6 +37,7 @@ export const SectionHeading = styled.h2(({ theme, style }: CustomStyledComponent
     font-size: ${theme.fonts.sectionHeading.size};
     font-weight: ${theme.fonts.sectionHeading.weight};
     color: ${theme.colors.text.sectionHeading};
+    line-height: ${theme.lineHeight.heading};
   `,
   { ...style },
 ]);

@@ -77,6 +77,7 @@ const darkHarmonica: Theme = {
 
   lineHeight: {
     paragraph: '3.2rem',
+    heading: '3.2rem',
   },
 
   maxWidth: '970px',

@@ -61,6 +61,7 @@ export interface Theme {
 
   lineHeight: {
     paragraph: string;
+    heading: string;
   };
 
   maxWidth: string; // maximum width of the content area
