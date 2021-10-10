@@ -33,6 +33,10 @@ const painoKeys: Theme = {
       size: '4.8rem',
       weight: '700',
     },
+    pageHeading: {
+      size: '4rem',
+      weight: '700',
+    },
     sectionHeading: {
       size: '3.2rem',
       weight: '700',

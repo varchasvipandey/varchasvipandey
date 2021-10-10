@@ -1,8 +1,12 @@
 import { StyledComponentProps } from '../../../../themes/interface';
 import styled, { css } from 'styled-components';
 
+interface LayoutContainer extends StyledComponentProps {
+  emptyCanvas?: boolean;
+}
+
 export default styled.main(
-  ({ theme }: StyledComponentProps) => css`
+  ({ theme, emptyCanvas }: LayoutContainer) => css`
     max-width: ${theme.maxWidth};
     margin: 0 auto;
     background-color: ${theme.colors.background};
@@ -18,7 +22,10 @@ export default styled.main(
     }
 
     .main {
-      padding: ${theme.padding.main};
+      ${!emptyCanvas &&
+      css`
+        padding: ${theme.padding.main};
+      `}
     }
   `,
 );
