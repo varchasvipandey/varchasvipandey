@@ -6,6 +6,7 @@ export default styled.nav(
     display: flex;
     align-items: center;
     justify-content: flex-end;
+    position: fixed;
 
     padding: ${theme.padding.main};
 

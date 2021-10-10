@@ -13,9 +13,21 @@ interface LayoutProps {
   children: React.ReactNode;
   title?: string;
   description?: string;
+  emptyCanvas?: boolean;
+  image?: string;
+  keywords?: string; // coma separated
+  url?: string;
 }
 
-const Layout: React.FC<LayoutProps> = ({ children, title, description }) => {
+const Layout: React.FC<LayoutProps> = ({
+  children,
+  title,
+  description,
+  emptyCanvas = false,
+  image,
+  keywords,
+  url,
+}) => {
   const [menuOn, setMenuOn] = React.useState<boolean>(false);
   const [mountMenu, setMountMenu] = React.useState<boolean>(false);
   const [selectedTheme, setSelectedTheme] = React.useState<Theme>(getSelectedTheme());
@@ -50,12 +62,15 @@ const Layout: React.FC<LayoutProps> = ({ children, title, description }) => {
         <meta name="description" content={description || ''} />
         <meta
           name="keywords"
-          content="web developer, frontend developer, designer, varchasvi, ui, ux, graphics designer"
+          content={
+            keywords ||
+            'web developer, frontend developer, designer, varchasvi, ui, ux, graphics designer'
+          }
         />
 
         {/* Twitter */}
         <meta name="twitter:card" content="summary" />
-        <meta name="twitter:url" content="https://varchasvipandey.com" />
+        <meta name="twitter:url" content={url || 'https://varchasvipandey.com'} />
         <meta
           name="twitter:title"
           content={title || 'Varchasvi Pandey - Web application designer & developer'}
@@ -63,19 +78,22 @@ const Layout: React.FC<LayoutProps> = ({ children, title, description }) => {
         <meta name="twitter:description" content={description || ''} />
 
         {/*  Open graph */}
-        <meta property="og:image" content="https://varchasvipandey.com/profile-512x512.png" />
+        <meta
+          property="og:image"
+          content={image || 'https://varchasvipandey.com/profile-512x512.png'}
+        />
         <meta
           property="og:title"
           content={title || 'Varchasvi Pandey - Web application designer & developer'}
         />
-        <meta property="og:type" content="profile" />
+        <meta property="og:type" content="website" />
         <meta
           property="og:site_name"
-          content="Varchasvi Pandey - Web application designer & developer"
+          content={title || 'Varchasvi Pandey - Web application designer & developer'}
         />
         <meta property="og:description" content={description || ''} />
       </Helmet>
-      <Container>
+      <Container emptyCanvas={emptyCanvas}>
         <Navbar handleMenuToggle={handleMenuToggle} />
         {mountMenu && (
           <Menu

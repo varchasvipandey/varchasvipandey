@@ -10,6 +10,7 @@ export default styled.section(
 
     .intro-text {
       text-align: center;
+      padding-top: 2rem;
       &__welcome {
         font-size: 2rem;
         font-weight: 400;
