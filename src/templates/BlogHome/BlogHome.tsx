@@ -28,7 +28,7 @@ const BlogHome: React.FC<BlogHomeProps> = ({ pageContext: { mediumBlogs } }) => 
     <Layout
       emptyCanvas
       title="Blog | Varchasvi Pandey"
-      description="Read blogs by Varchasvi Pandey. Explore the list of super easy to read and understand tech blogs on web development and software engineering."
+      description="Read blogs by Varchasvi Pandey. Explore the list of super easy to read and understandable tech blogs on web development and software engineering."
       keywords="blogs, web development, varchasvi blogs, react blogs, frontend blogs"
     >
       <Container>
