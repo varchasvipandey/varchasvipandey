@@ -19,6 +19,19 @@ export const Title = styled.h1(({ theme, style }: CustomStyledComponents) => [
   { ...style },
 ]);
 
+export const PageHeading = styled.h1(({ theme, style }: CustomStyledComponents) => [
+  css`
+    font-size: ${theme.fonts.pageHeading.size};
+    font-weight: ${theme.fonts.pageHeading.weight};
+    color: ${theme.colors.text.title};
+
+    @media only screen and (max-width: ${theme.breakpoints.mobile}) {
+      font-size: ${theme.fonts.sectionHeading.size};
+    }
+  `,
+  { ...style },
+]);
+
 export const SectionHeading = styled.h2(({ theme, style }: CustomStyledComponents) => [
   css`
     font-size: ${theme.fonts.sectionHeading.size};

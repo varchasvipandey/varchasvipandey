@@ -33,6 +33,7 @@ export interface Theme {
 
   fonts: {
     title: Font;
+    pageHeading: Font;
     sectionHeading: Font;
     sectionSubHeading: Font;
     sectionText: Font;
