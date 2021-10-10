@@ -57,10 +57,18 @@ export const Container = styled.aside(({ theme, style }: StyledComponentProps) =
         margin: 0 auto;
         margin-top: 2rem;
         display: flex;
-        min-height: 80vh;
-        flex-direction: column;
-        align-items: center;
         justify-content: center;
+      }
+
+      /* Sub menu */
+      .sub-menu {
+        max-width: ${theme.maxWidth};
+        margin: 0 auto;
+        margin-top: 4rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
       }
     }
 
@@ -99,17 +107,18 @@ export const Container = styled.aside(({ theme, style }: StyledComponentProps) =
 
 interface OptionProps extends StyledComponentProps {
   animationDelay: number;
+  childItem?: boolean;
 }
 
-export const Option = styled.a(
-  ({ theme, animationDelay }: OptionProps) => css`
-    text-decoration: none;
+export const Option = styled.p(
+  ({ theme, animationDelay, childItem }: OptionProps) => css`
     font-size: ${theme.fonts.sectionHeading.size};
     color: ${theme.colors.text.menu};
     margin-top: 2.4rem;
     cursor: pointer;
     transition: all 0.2s;
     font-weight: 300;
+    margin: 0 2rem;
 
     opacity: 0;
     transform: scale(0);
@@ -118,6 +127,13 @@ export const Option = styled.a(
     animation-fill-mode: forwards;
 
     position: relative;
+
+    ${childItem &&
+    css`
+      font-size: ${theme.fonts.sectionSubHeading.size};
+      margin-bottom: 2rem;
+      animation-delay: ${0.1 + animationDelay / 5 + 's'};
+    `}
 
     &::before {
       content: '';

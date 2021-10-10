@@ -1,5 +1,6 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Container, Option } from './Menu.style';
+import { Link } from 'gatsby';
 
 interface MenuProps {
   handleMenuToggle: Function;
@@ -8,13 +9,20 @@ interface MenuProps {
 }
 
 const MENU_ITEMS = [
-  { label: 'About Me', href: '#about-me' },
-  { label: 'Content for Devs', href: '#community-content' },
-  { label: 'Side projects', href: '#side-projects' },
-  { label: 'Utility projects', href: '#utility-projects' },
-  { label: 'Tech stack', href: '#tech-stack' },
-  { label: 'Entertainment', href: '#get-entertained' },
-  { label: 'Connect', href: '#connect' },
+  {
+    label: 'Home',
+    href: '/',
+    subMemuItems: [
+      { label: 'About Me', href: '/#about-me' },
+      { label: 'Content for Devs', href: '/#community-content' },
+      { label: 'Side projects', href: '/#side-projects' },
+      { label: 'Utility projects', href: '/#utility-projects' },
+      { label: 'Tech stack', href: '/#tech-stack' },
+      { label: 'Entertainment', href: '/#get-entertained' },
+      { label: 'Connect', href: '/#connect' },
+    ],
+  },
+  { label: 'Blog', href: '/blog', subMemuItems: [] },
 ];
 
 const Menu: React.FC<MenuProps> = ({ handleMenuToggle, menuOn }) => {
@@ -24,6 +32,8 @@ const Menu: React.FC<MenuProps> = ({ handleMenuToggle, menuOn }) => {
     handleThemeSwitch();
     setSwappedTheme((prev) => !prev);
   }; */
+
+  const [activeTab, setActiveTab] = useState<string>('/');
 
   return (
     <Container style={!menuOn ? { animation: 'fadeOut 1s' } : {}}>
@@ -48,15 +58,29 @@ const Menu: React.FC<MenuProps> = ({ handleMenuToggle, menuOn }) => {
         {/* Options */}
         <div className="options">
           {MENU_ITEMS.map((option, i: number) => (
-            <Option
-              key={i}
-              href={option.href}
-              animationDelay={i + 1}
-              onClick={() => handleMenuToggle()}
-            >
-              {option.label}
-            </Option>
+            <Link key={i} to={option.href} style={{ textDecoration: 'none' }}>
+              <Option
+                animationDelay={i + 1}
+                onClick={() => handleMenuToggle()}
+                onMouseEnter={() => setActiveTab(option.href)}
+              >
+                {option.label}
+              </Option>
+            </Link>
           ))}
+        </div>
+
+        {/* Sub menu items */}
+        <div className="sub-menu">
+          {MENU_ITEMS.filter((item) => item.href === activeTab)[0]?.subMemuItems.map(
+            (subItem, i: number) => (
+              <Link key={i} to={subItem.href} style={{ textDecoration: 'none' }}>
+                <Option childItem animationDelay={i + 1} onClick={() => handleMenuToggle()}>
+                  {subItem.label}
+                </Option>
+              </Link>
+            ),
+          )}
         </div>
       </div>
     </Container>
