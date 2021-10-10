@@ -48,7 +48,7 @@ const Blog: React.FC<BlogProps> = ({ pageContext }) => {
   return (
     <Layout
       emptyCanvas
-      title={item.title + ' | Varchasvi Pandey'}
+      title={item.title.replace('&amp;', '&') + ' | Varchasvi Pandey'}
       description={item.description.replace(/(<([^>]+)>)/gi, '').slice(0, 160)}
       image={item.thumbnail}
       keywords={item.categories.join(', ')}
@@ -56,7 +56,7 @@ const Blog: React.FC<BlogProps> = ({ pageContext }) => {
     >
       <Container thumbnail={item.thumbnail}>
         <div className="header">
-          <PageHeading className="header__title">{item.title}</PageHeading>
+          <PageHeading className="header__title">{item.title.replace('&amp;', '&')}</PageHeading>
         </div>
 
         <div className="meta-action">
