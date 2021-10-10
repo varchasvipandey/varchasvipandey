@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Container, Option } from './Menu.style';
 import { Link } from 'gatsby';
+import { CrossIcon } from '../../../../icons';
 
 interface MenuProps {
   handleMenuToggle: Function;
@@ -51,7 +52,7 @@ const Menu: React.FC<MenuProps> = ({ handleMenuToggle, menuOn }) => {
 
           {/* Close icon */}
           <div className="actions__close" onClick={() => handleMenuToggle()}>
-            <img src="./assets/corss-outline-white.svg" alt="close" loading="lazy" />
+            <CrossIcon style={{ width: '4rem', color: '#fff' }} />
           </div>
         </div>
 
