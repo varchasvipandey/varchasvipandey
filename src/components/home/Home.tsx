@@ -8,6 +8,7 @@ import {
   TechStack,
   GetInTouch,
 } from '.';
+
 import React from 'react';
 import { QueryNode } from '../../types';
 
