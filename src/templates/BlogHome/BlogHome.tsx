@@ -38,7 +38,7 @@ const BlogHome: React.FC<BlogHomeProps> = ({ pageContext: { mediumBlogs } }) => 
           {mediumBlogs.map((blog) => (
             <BlogCard
               key={blog.guid}
-              title={blog.title}
+              title={blog.title.replace('&amp;', '&')}
               description={blog.description.replace(/(<([^>]+)>)/gi, '').slice(0, 150) + '...'}
               thumbnail={blog.thumbnail}
               date={dateAgoFormat(blog.pubDate)}
