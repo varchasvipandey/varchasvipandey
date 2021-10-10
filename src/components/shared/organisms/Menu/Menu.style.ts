@@ -40,13 +40,13 @@ export const Container = styled.aside(({ theme, style }: StyledComponentProps) =
           display: flex;
           justify-content: flex-end;
           user-select: none;
+          transform: translateX(200%) rotate(360deg) scale(0.8);
+          animation: rotateAndEnter 0.5s;
+          animation-delay: 0.5s;
+          animation-fill-mode: forwards;
+          cursor: pointer;
           img {
             width: 2.4rem;
-            transform: translateX(200%) rotate(360deg) scale(0.8);
-            animation: rotateAndEnter 0.5s;
-            animation-delay: 0.5s;
-            animation-fill-mode: forwards;
-            cursor: pointer;
           }
         }
       }
