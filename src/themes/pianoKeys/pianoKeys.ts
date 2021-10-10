@@ -79,6 +79,7 @@ const painoKeys: Theme = {
 
   lineHeight: {
     paragraph: '3.2rem',
+    heading: '4rem',
   },
 
   maxWidth: '970px',
@@ -86,7 +87,7 @@ const painoKeys: Theme = {
   /* Break points */
   breakpoints: {
     desktop: '1200px',
-    tabletLS: '720px',
+    tabletLS: '800px',
     tabletPT: '640px',
     mobile: '460px',
     mobileSlim: '360px',
