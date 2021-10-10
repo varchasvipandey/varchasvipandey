@@ -13,6 +13,15 @@ module.exports.createPages = async ({ actions: { createPage } }) => {
   if (json.status === 'ok') {
     console.log('---------------MEDIUM POSTS------------------');
 
+    // Create page to list blogs
+    createPage({
+      path: `/blog`,
+      component: require.resolve('./src/templates/BlogHome/BlogHome.tsx'),
+      context: { mediumBlogs: json.items },
+    });
+    console.log(`Page created at /blog`);
+
+    // Create blog pages for individual posts
     json.items.forEach((item) => {
       const slug = item.title.toLowerCase().split(' ').join('-');
       createPage({
