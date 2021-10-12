@@ -133,6 +133,11 @@ export const Option = styled.p(
       font-size: ${theme.fonts.sectionSubHeading.size};
       margin-bottom: 2rem;
       animation-delay: ${0.1 + animationDelay / 5 + 's'};
+
+      @media only screen and (max-width: ${theme.breakpoints.tabletLS}) {
+        font-size: 3.2rem;
+        margin-top: 1.6rem;
+      }
     `}
 
     &::before {
