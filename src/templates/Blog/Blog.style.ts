@@ -56,6 +56,11 @@ const Container = styled.main(
         margin: 2rem;
       }
 
+      h3 {
+        font-size: ${theme.fonts.sectionHeading.size};
+        font-weight: ${theme.fonts.sectionHeading.weight};
+      }
+
       p {
         font-size: ${theme.fonts.sectionText.size};
         font-weight: ${theme.fonts.sectionText.weight};
@@ -69,6 +74,13 @@ const Container = styled.main(
           color: ${theme.colors.text.sectionSubHeading} !important;
           color: ${theme.colors.primaryDark} !important;
         }
+      }
+
+      pre {
+        font-size: ${theme.fonts.mutedText.size};
+        background-color: #eee;
+        padding: 2rem;
+        cursor: pointer;
       }
 
       blockquote {
