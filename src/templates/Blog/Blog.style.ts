@@ -80,6 +80,7 @@ const Container = styled.main(
         font-size: ${theme.fonts.mutedText.size};
         background-color: #eee;
         padding: 2rem;
+        overflow-x: auto;
         cursor: pointer;
       }
 
