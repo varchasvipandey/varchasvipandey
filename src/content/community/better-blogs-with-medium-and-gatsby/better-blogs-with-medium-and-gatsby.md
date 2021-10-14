@@ -1,5 +1,5 @@
 ---
-title: Better blogs with Medium & Gatsby
+title: Better Blogs
 date: 2021-10-13
 publishedOn: Medium and Varchasvi Pandey
 thumb: ./thumb.jpeg
