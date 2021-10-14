@@ -1,7 +1,7 @@
-import React from 'react';
+import React, { useLayoutEffect, useState } from 'react';
 import { Layout } from '../../components';
 import Container from './Blog.style';
-import { PageHeading, ActionTabs } from '../../components';
+import { PageHeading, ActionTabs, Snackbar } from '../../components';
 import dateAgoFormat from '../../utils/dateAgoFormat';
 import { MediumBlog } from '../BlogHome/BlogHome';
 import { ShareIcon, HeartIcon } from '../../icons';
@@ -14,6 +14,8 @@ interface BlogProps {
 }
 
 const Blog: React.FC<BlogProps> = ({ pageContext }) => {
+  const [snippetSnackbarVisible, setSnippetSnackbarVisible] = useState(false);
+
   if (!pageContext) return null;
 
   const { item, url } = pageContext;
@@ -45,6 +47,28 @@ const Blog: React.FC<BlogProps> = ({ pageContext }) => {
     },
   ];
 
+  // Script to add event listener to all pre tags for easy code copying
+  useLayoutEffect(() => {
+    if (!navigator) return;
+
+    const codeSnippets = document.querySelectorAll('pre');
+
+    codeSnippets.forEach((snippet) => {
+      snippet.addEventListener('click', function () {
+        const copyText = snippet.innerText;
+        navigator.clipboard.writeText(copyText);
+        setSnippetSnackbarVisible((prev) => {
+          if (!prev) {
+            setTimeout(() => {
+              setSnippetSnackbarVisible(false);
+            }, 1000);
+            return true;
+          } else return false;
+        });
+      });
+    });
+  }, []);
+
   return (
     <Layout
       emptyCanvas
@@ -66,11 +90,19 @@ const Blog: React.FC<BlogProps> = ({ pageContext }) => {
           </div>
         </div>
 
-        <div className="body" dangerouslySetInnerHTML={{ __html: item.description }}></div>
+        <div
+          className="body"
+          dangerouslySetInnerHTML={{
+            __html: item.description,
+          }}
+        ></div>
 
         <div className="footer">
           <ActionTabs actionItems={actionItems} />
         </div>
+
+        {/* Code copied snackbar */}
+        {snippetSnackbarVisible && <Snackbar label="SNIPPET COPIED!" />}
       </Container>
     </Layout>
   );
