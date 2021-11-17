@@ -1,6 +1,6 @@
 ## [About me][website]
 
-I am a web application designer and developer based out of New Delhi, India. I am Founding team member and Front-end engineer at [Alyve Health][alyvehealth]. I Spend most of my time creating front-end architectures, designs and developing web based applications using React and TypeScript.
+Web application designer and developer based out of New Delhi, India. I am a Founding team member and Front-end engineer at [Alyve Health][alyvehealth]. I Spend most of my time creating front-end architectures, designs and developing web based applications using React and TypeScript.
 
 <br/>
 
