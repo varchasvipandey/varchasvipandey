@@ -49,21 +49,8 @@ const Layout: React.FC<LayoutProps> = ({
 
   const handleThemeSwitch = (): void => {
     const nextTheme = selectNextTheme();
-    console.log(nextTheme);
     setSelectedTheme(nextTheme);
   };
-
-  /* Set default selected theme (after document loads) */
-  React.useEffect(() => {
-    let themeSetTimer = setTimeout(() => {
-      setSelectedTheme(getSelectedTheme());
-      console.log('Set theme');
-    }, 3000);
-
-    return () => {
-      clearTimeout(themeSetTimer);
-    };
-  }, []);
 
   return (
     <ThemeProvider theme={selectedTheme}>
