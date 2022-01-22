@@ -55,7 +55,14 @@ const Layout: React.FC<LayoutProps> = ({
 
   /* Set default selected theme (after document loads) */
   React.useEffect(() => {
-    if (typeof document !== undefined) setSelectedTheme(getSelectedTheme());
+    let themeSetTimer = setTimeout(() => {
+      setSelectedTheme(getSelectedTheme());
+      console.log('Set theme');
+    }, 3000);
+
+    return () => {
+      clearTimeout(themeSetTimer);
+    };
   }, []);
 
   return (
