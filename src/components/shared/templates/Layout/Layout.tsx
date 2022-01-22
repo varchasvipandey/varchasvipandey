@@ -47,10 +47,16 @@ const Layout: React.FC<LayoutProps> = ({
     });
   };
 
-  // ! Handle theme switch (NOT IN USE)
   const handleThemeSwitch = (): void => {
-    setSelectedTheme(selectNextTheme());
+    const nextTheme = selectNextTheme();
+    console.log(nextTheme);
+    setSelectedTheme(nextTheme);
   };
+
+  /* Set default selected theme (after document loads) */
+  React.useEffect(() => {
+    if (typeof document !== undefined) setSelectedTheme(getSelectedTheme());
+  }, []);
 
   return (
     <ThemeProvider theme={selectedTheme}>
