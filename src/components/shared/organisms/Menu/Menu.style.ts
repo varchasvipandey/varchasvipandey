@@ -66,9 +66,14 @@ export const Container = styled.aside(({ theme, style }: StyledComponentProps) =
         margin: 0 auto;
         margin-top: 4rem;
         display: flex;
-        flex-direction: column;
+        flex-direction: row;
         justify-content: center;
         align-items: center;
+        flex-wrap: wrap;
+
+        @media only screen and (max-width: ${theme.breakpoints.tabletLS}) {
+          flex-direction: column;
+        }
       }
     }
 
@@ -117,7 +122,7 @@ export const Option = styled.p(
     margin-top: 2.4rem;
     cursor: pointer;
     transition: all 0.2s;
-    font-weight: 300;
+    font-weight: 600;
     margin: 0 2rem;
 
     opacity: 0;
@@ -130,13 +135,14 @@ export const Option = styled.p(
 
     ${childItem &&
     css`
-      font-size: ${theme.fonts.sectionSubHeading.size};
+      /* font-size: ${theme.fonts.sectionSubHeading.size}; */
+      font-weight: 300;
       margin-bottom: 2rem;
       animation-delay: ${0.1 + animationDelay / 5 + 's'};
 
       @media only screen and (max-width: ${theme.breakpoints.tabletLS}) {
-        font-size: 3.2rem;
-        margin-top: 1.6rem;
+        font-size: 2.4rem;
+        margin-top: 1.2rem;
       }
     `}
 
