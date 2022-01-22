@@ -23,9 +23,14 @@ const ContentTray: React.FC<ContentTrayProps> = ({ contentList = [] }) => {
   return (
     <Wrapper>
       <Container ref={containerRef}>
-        {contentList.map((content: QueryNode) => (
-          <ContentCard key={content.id} style={{ marginRight: '2rem' }} content={content} />
-        ))}
+        {contentList
+          .sort((a, b) => {
+            if (a?.frontmatter?.date! > b?.frontmatter?.date!) return -1;
+            else return 1;
+          })
+          .map((content: QueryNode) => (
+            <ContentCard key={content.id} style={{ marginRight: '2rem' }} content={content} />
+          ))}
       </Container>
 
       <div className="nav-btn nav-btn__left" onClick={() => handleScroll('left')}>
