@@ -9,7 +9,8 @@ const Navbar: React.FC<NavbarProps> = ({ handleMenuToggle }) => {
   return (
     <Container>
       <div className="action" onClick={handleMenuToggle}>
-        🧐
+        {/* 🧐 */}
+        🦚
       </div>
     </Container>
   );

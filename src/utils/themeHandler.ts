@@ -1,10 +1,10 @@
-import { pianoKeys, darkHarmonica } from '../themes';
+import { pianoKeys, darkHarmonica, bharat } from '../themes';
 import { Theme } from '../themes/interface';
 import Cookies from 'js-cookie';
 
 import { LOCAL_DB_THEME_ID } from './constants';
 
-export const themesList = [pianoKeys, darkHarmonica];
+export const themesList = [pianoKeys, darkHarmonica, bharat];
 
 export const getSelectedTheme = (): Theme => {
   // ! to be fixed
@@ -17,7 +17,7 @@ export const getSelectedTheme = (): Theme => {
     }
   } */
 
-  return themesList[1]; // return default theme (dark is default now)
+  return themesList[2]; // return default theme (bharat is default now)
 };
 
 export const selectTheme = (themeId: number): boolean => {

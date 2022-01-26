@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import { Container, Option } from './Menu.style';
 import { Link } from 'gatsby';
 import { CrossIcon } from '../../../../icons';
+import { useTheme } from 'styled-components';
+import { Theme } from '../../../../themes';
 
 interface MenuProps {
   handleMenuToggle: Function;
@@ -27,6 +29,8 @@ const MENU_ITEMS = [
 ];
 
 const Menu: React.FC<MenuProps> = ({ handleMenuToggle, menuOn, handleThemeSwitch }) => {
+  //@ts-ignore
+  const theme: Theme = useTheme();
   const [swappedTheme, setSwappedTheme] = React.useState<boolean>(false);
 
   const handleThemeSwitchWithAnimation = (disabled?: boolean): void => {
@@ -57,7 +61,7 @@ const Menu: React.FC<MenuProps> = ({ handleMenuToggle, menuOn, handleThemeSwitch
 
           {/* Close icon */}
           <div className="actions__close" onClick={() => handleMenuToggle()}>
-            <CrossIcon style={{ width: '4rem', color: '#fff' }} />
+            <CrossIcon style={{ width: '4rem', color: theme?.colors?.text?.menu }} />
           </div>
         </div>
 
