@@ -17,7 +17,7 @@ export const getSelectedTheme = (): Theme => {
     }
   } */
 
-  return themesList[2]; // return default theme (bharat is default now)
+  return themesList[1]; // return default theme (darkHarmonica is default now)
 };
 
 export const selectTheme = (themeId: number): boolean => {
