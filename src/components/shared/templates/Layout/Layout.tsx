@@ -47,9 +47,9 @@ const Layout: React.FC<LayoutProps> = ({
     });
   };
 
-  // ! Handle theme switch (NOT IN USE)
   const handleThemeSwitch = (): void => {
-    setSelectedTheme(selectNextTheme());
+    const nextTheme = selectNextTheme();
+    setSelectedTheme(nextTheme);
   };
 
   return (

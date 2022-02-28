@@ -1,7 +1,7 @@
 ---
 title: Async arrays in JS
 date: 2020-06-05
-publishedOn: Medium
+publishedOn: Medium and Varchasvi Pandey
 thumb: ./thumb.jpeg
-url: https://medium.com/@varchasvipandey/asynchronous-array-behaviour-in-javascript-7e86ff3638eb
+url: https://varchasvipandey.com/blog/asynchronous-array-behaviour-in-javascript
 ---

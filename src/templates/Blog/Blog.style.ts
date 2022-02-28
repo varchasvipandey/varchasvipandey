@@ -25,7 +25,7 @@ const Container = styled.main(
       padding: 2rem;
 
       &__title {
-        color: ${theme.colors.section};
+        color: #eee;
       }
     }
 
@@ -78,7 +78,7 @@ const Container = styled.main(
 
       pre {
         font-size: ${theme.fonts.mutedText.size};
-        background-color: #eee;
+        background-color: ${theme.colors.section};
         padding: 2rem;
         overflow-x: auto;
         cursor: pointer;

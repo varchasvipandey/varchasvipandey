@@ -38,7 +38,8 @@ export const ActionItemContainer = styled.div(
       box-shadow: ${theme.boxShadow.light};
       border-radius: 4px;
       padding: 0.4rem 0.8rem;
-      display: none;
+      transform: scale(0);
+      transition: all 0.1s ease-in-out;
     }
 
     &:hover {
@@ -46,6 +47,7 @@ export const ActionItemContainer = styled.div(
       box-shadow: ${theme.boxShadow.normal};
       &::after {
         display: block;
+        transform: scale(1);
       }
     }
 

@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import { Container, Option } from './Menu.style';
 import { Link } from 'gatsby';
 import { CrossIcon } from '../../../../icons';
+import { useTheme } from 'styled-components';
+import { Theme } from '../../../../themes';
 
 interface MenuProps {
   handleMenuToggle: Function;
@@ -26,13 +28,16 @@ const MENU_ITEMS = [
   { label: 'Blog', href: '/blog', subMemuItems: [] },
 ];
 
-const Menu: React.FC<MenuProps> = ({ handleMenuToggle, menuOn }) => {
-  // const [swappedTheme, setSwappedTheme] = React.useState<boolean>(false);
+const Menu: React.FC<MenuProps> = ({ handleMenuToggle, menuOn, handleThemeSwitch }) => {
+  //@ts-ignore
+  const theme: Theme = useTheme();
+  const [swappedTheme, setSwappedTheme] = React.useState<boolean>(false);
 
-  /*   const handleThemeSwitchWithAnimation = (): void => {
+  const handleThemeSwitchWithAnimation = (disabled?: boolean): void => {
+    if (disabled) return;
     handleThemeSwitch();
     setSwappedTheme((prev) => !prev);
-  }; */
+  };
 
   const [activeTab, setActiveTab] = useState<string>('/');
 
@@ -41,18 +46,22 @@ const Menu: React.FC<MenuProps> = ({ handleMenuToggle, menuOn }) => {
       <div className="container">
         <div className="actions">
           {/* Themes */}
-          <div className="actions__theme-switch" /* onClick={handleThemeSwitchWithAnimation} */>
-            {/* <img
+          <div
+            className="actions__theme-switch"
+            onClick={() => handleThemeSwitchWithAnimation(true)}
+            style={{ opacity: '0.2', cursor: 'not-allowed' }}
+          >
+            <img
               src="./assets/theme-swapped.svg"
               alt="default theme"
               loading="lazy"
               style={swappedTheme ? { transform: 'rotate(180deg)' } : {}}
-            /> */}
+            />
           </div>
 
           {/* Close icon */}
           <div className="actions__close" onClick={() => handleMenuToggle()}>
-            <CrossIcon style={{ width: '4rem', color: '#fff' }} />
+            <CrossIcon style={{ width: '4rem', color: theme?.colors?.text?.menu }} />
           </div>
         </div>
 

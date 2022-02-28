@@ -20,10 +20,7 @@ const GetEntertained: React.FC<GetEntertainedProps> = ({ entertainmentContentLis
       </div>
 
       <div style={{ textAlign: 'center', marginTop: '3.2rem' }}>
-        <MutedText>
-          {`"I ain't your boring dev" - `}
-          <span style={{ textDecoration: 'line-through' }}>Jennifer Lopez</span> Me 😎
-        </MutedText>
+        <MutedText>YouTube and Instagram links available below</MutedText>
       </div>
     </Section>
   );

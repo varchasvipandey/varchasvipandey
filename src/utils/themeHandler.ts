@@ -1,23 +1,23 @@
-import { pianoKeys, darkHarmonica } from '../themes';
+import { pianoKeys, darkHarmonica, bharat } from '../themes';
 import { Theme } from '../themes/interface';
 import Cookies from 'js-cookie';
 
 import { LOCAL_DB_THEME_ID } from './constants';
 
-export const themesList = [pianoKeys, darkHarmonica];
+export const themesList = [pianoKeys, darkHarmonica, bharat];
 
 export const getSelectedTheme = (): Theme => {
-  // ! NOT IN USE
-  // if (typeof window !== 'undefined') {
-  //   const selectedThemeId: string | undefined = Cookies.get(LOCAL_DB_THEME_ID);
+  // ! to be fixed
+  /*   if (typeof window !== 'undefined') {
+    const selectedThemeId: string | undefined = Cookies.get(LOCAL_DB_THEME_ID);
 
-  //   if (selectedThemeId) {
-  //     const selectedTheme = themesList.filter((theme) => +theme.id === +selectedThemeId);
-  //     if (selectedTheme.length) return selectedTheme[0];
-  //   }
-  // }
+    if (selectedThemeId) {
+      const selectedTheme = themesList.filter((theme) => +theme.id === +selectedThemeId);
+      if (selectedTheme.length) return selectedTheme[0];
+    }
+  } */
 
-  return themesList[0]; // return default theme
+  return themesList[1]; // return default theme (darkHarmonica is default now)
 };
 
 export const selectTheme = (themeId: number): boolean => {
