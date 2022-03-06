@@ -7,6 +7,8 @@ interface SideProjectsProps {
 }
 
 const SideProjects: React.FC<SideProjectsProps> = ({ projectsList }) => {
+  console.log({ projectsList });
+
   return (
     <Section heading="My side-projects 🎦">
       <Text>
@@ -16,13 +18,18 @@ const SideProjects: React.FC<SideProjectsProps> = ({ projectsList }) => {
       </Text>
 
       <div className="list">
-        {projectsList.map((project: QueryNode, i: number) => (
-          <DetailedContent
-            key={project.id}
-            style={i + 1 === projectsList.length ? { marginTop: '6.2rem' } : {}}
-            content={project}
-          />
-        ))}
+        {projectsList
+          .sort((a, b) => {
+            if (a?.frontmatter?.date! > b?.frontmatter?.date!) return -1;
+            else return 1;
+          })
+          .map((project: QueryNode, i: number) => (
+            <DetailedContent
+              key={project.id}
+              style={i + 1 === projectsList.length ? { marginTop: '6.2rem' } : {}}
+              content={project}
+            />
+          ))}
       </div>
     </Section>
   );

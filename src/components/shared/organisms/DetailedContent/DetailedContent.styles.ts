@@ -5,6 +5,7 @@ export default styled.section(({ style, theme }: StyledComponentProps) => [
   css`
     display: flex;
     align-items: flex-start;
+    margin-top: 6.2rem;
 
     @media only screen and (max-width: ${theme.breakpoints.tabletPT}) {
       flex-direction: column;
