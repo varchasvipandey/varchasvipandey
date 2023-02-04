@@ -42,7 +42,10 @@ const BlogHome: React.FC<BlogHomeProps> = ({ pageContext: { mediumBlogs } }) => 
               description={blog.description.replace(/(<([^>]+)>)/gi, '').slice(0, 150) + '...'}
               thumbnail={blog.thumbnail}
               date={dateAgoFormat(blog.pubDate)}
-              url={`https://varchasvipandey.com/${blog.title.toLowerCase().split(' ').join('-')}`}
+              url={`https://varchasvipandey.com/blog/${blog.title
+                .toLowerCase()
+                .split(' ')
+                .join('-')}`}
               link={blog.link}
               onClickHandler={() =>
                 navigate(`/blog/${blog.title.toLowerCase().split(' ').join('-')}`)

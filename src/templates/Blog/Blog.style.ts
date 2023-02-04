@@ -61,7 +61,14 @@ const Container = styled.main(
         font-weight: ${theme.fonts.sectionHeading.weight};
       }
 
-      p {
+      h4 {
+        font-size: ${theme.fonts.sectionSubHeading.size};
+        font-weight: ${theme.fonts.sectionSubHeading.weight};
+      }
+
+      p,
+      ul > li,
+      ol > li {
         font-size: ${theme.fonts.sectionText.size};
         font-weight: ${theme.fonts.sectionText.weight};
         color: ${theme.colors.text.sectionText};
@@ -74,6 +81,11 @@ const Container = styled.main(
           color: ${theme.colors.text.sectionSubHeading} !important;
           color: ${theme.colors.primaryDark} !important;
         }
+      }
+
+      ul,
+      ol {
+        padding-left: 4rem;
       }
 
       pre {
