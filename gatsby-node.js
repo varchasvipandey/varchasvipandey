@@ -1,6 +1,23 @@
 const fetch = require('node-fetch');
+const contentful = require('contentful');
 
 module.exports.createPages = async ({ actions: { createPage } }) => {
+  const client = contentful.createClient({
+    space: process.env.CONTENTFUL_SPACE,
+    environment: 'master', // defaults to 'master' if not set
+    accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
+  });
+
+  client
+    .getEntries()
+    .then((response) =>
+      console.log('x-x-x-x-x-x-x: ', {
+        content: response.items[0].fields?.content?.content?.map((item) => item),
+        image: response.items[0].fields?.image?.fields?.file,
+      }),
+    )
+    .catch(console.error);
+
   const username = 'varchasvipandey';
   const mediumRss = `https://medium.com/feed/@${username}`;
   const ENDPOINT = `https://api.rss2json.com/v1/api.json?rss_url=${mediumRss}`;
