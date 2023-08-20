@@ -1,8 +1,12 @@
 import { StyledComponentProps } from '../../../themes/interface';
 import styled, { css } from 'styled-components';
 
+interface Props extends StyledComponentProps {
+  extendedintro: boolean;
+}
+
 export default styled.section(
-  ({ theme }: StyledComponentProps) => css`
+  ({ theme, extendedintro }: Props) => css`
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -33,9 +37,11 @@ export default styled.section(
       margin-top: 8rem;
       width: 80%;
       display: flex;
-      align-items: center;
+      align-items: ${extendedintro ? 'start' : 'center'};
+      transition: all 0.3s;
 
       @media only screen and (max-width: ${theme.breakpoints.tabletPT}) {
+        align-items: center;
         flex-direction: column;
         width: 100%;
       }
@@ -60,6 +66,9 @@ export default styled.section(
         padding: 4rem 4rem 4rem 8rem;
         border-radius: 8rem 2rem 2rem 8rem;
         transform: translateX(-2.4rem);
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
 
         @media only screen and (max-width: ${theme.breakpoints.tabletPT}) {
           border-radius: 2rem;

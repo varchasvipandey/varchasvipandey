@@ -6,14 +6,6 @@ const About: React.FC = () => {
   return (
     <Section heading="What I do? 👨‍💻">
       <Container>
-        <div className="company-profile">
-          <img
-            src="https://github.com/varchasvipandey/images/blob/master/AH%20POST%20LINKEDIN%20-%20varchasvi.png?raw=true"
-            alt="Live Alyve Life - Varchasvi Pandey - #LiveAlyveLife"
-            loading="lazy"
-          />
-        </div>
-
         <Text>
           I am a part of a highly energetic & motivated team devoting all its time to making the
           healthcare system more reliable and friendly. At{' '}

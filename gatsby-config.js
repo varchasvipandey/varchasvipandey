@@ -67,12 +67,14 @@ module.exports = {
   ],
   siteMetadata: {
     title: 'Varchasvi Pandey',
-    copyright: '2021 Varchasvi Pandey',
+    copyright: `${new Date().getFullYear()} Varchasvi Pandey`,
     author: 'Varchasvi Pandey',
     intro:
-      'From writing UI architectures on a piece of paper to building full-fledged web applications is what defines me. I work with leading web technologies and designing tools all day every day to make thoughtful applications. 💻',
+      "I've spent over 3 years diving deep into the world of React web and native development. My passion lies in crafting digital experiences that truly captivate and immerse users. I've got a knack for designing seamless UI/UX that feels like second nature, and I'm all about making sure every interaction is as smooth as can be.",
+    extendedIntro:
+      "I get a kick out of optimizing those user journeys - you know, making sure everything flows just right. The tech landscape is always evolving, and I'm right there on the cutting edge, harnessing all those cool new tools and technologies to bring ideas to life. But here's the real deal: I'm not just about code and pixels. I'm all about people - understanding what they want, need, and love. So, let's team up and cook up some seriously innovative and user-centric experiences together. I'm all ears for your ideas, and together, we'll create digital magic that leaves a lasting impact.",
     greetings: 'Hi there 👋, I am',
-    profession: 'Web application designer & developer',
-    footnote: 'developed to share ❤ ',
+    profession: 'Software Engineer, Web & Native App Developer',
+    footnote: 'developed to share & connect ❤ ',
   },
 };

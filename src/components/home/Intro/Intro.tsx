@@ -1,13 +1,13 @@
 import Container from './Intro.styles';
-import { Title, Text } from '../..';
-import React from 'react';
+import { Title, Text, Button } from '../..';
+import React, { useState } from 'react';
 import { graphql, useStaticQuery } from 'gatsby';
 import { getImage, GatsbyImage } from 'gatsby-plugin-image';
 
 const Intro: React.FC = () => {
   const {
     site: {
-      siteMetadata: { author, intro, greetings, profession },
+      siteMetadata: { author, intro, extendedIntro, greetings, profession },
     },
     profileImage,
   } = useStaticQuery(graphql`
@@ -16,6 +16,7 @@ const Intro: React.FC = () => {
         siteMetadata {
           author
           intro
+          extendedIntro
           greetings
           profession
         }
@@ -29,10 +30,14 @@ const Intro: React.FC = () => {
     }
   `);
 
+  const [extendedIntroVisible, setExtendedIntroVisible] = useState(false);
+
+  const showExtendedIntro = () => setExtendedIntroVisible(true);
+
   const profileImageUrl = getImage(profileImage);
 
   return (
-    <Container>
+    <Container extendedintro={extendedIntroVisible}>
       <div className="intro-text">
         <p className="intro-text__welcome">{greetings}</p>
         <Title>{author}</Title>
@@ -45,6 +50,13 @@ const Intro: React.FC = () => {
         </div>
         <div className="intro-card__content">
           <Text>{intro}</Text>
+          {extendedIntroVisible ? (
+            <Text>{extendedIntro}</Text>
+          ) : (
+            <Button variant="secondary" onClick={showExtendedIntro}>
+              Read More
+            </Button>
+          )}
         </div>
       </div>
     </Container>

@@ -7,20 +7,6 @@ export default styled.div(
       color: ${theme.colors.primary};
     }
 
-    .company-profile {
-      text-align: center;
-      margin-bottom: 4.8rem;
-      img {
-        width: 400px;
-        border-radius: 10px;
-        box-shadow: ${theme.boxShadow.dark};
-        @media only screen and (max-width: ${theme.breakpoints.tabletLS}) {
-          flex-direction: column-reverse;
-          width: 100%;
-        }
-      }
-    }
-
     .cta {
       display: flex;
       align-items: center;
