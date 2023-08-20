@@ -10,10 +10,10 @@ const SideProjects: React.FC<SideProjectsProps> = ({ projectsList }) => {
   console.log({ projectsList });
 
   return (
-    <Section heading="My side-projects 🎦">
+    <Section heading="My projects 🎦">
       <Text>
         {
-          'Taking time out for developing useful applications always feels good. Here is a list of some of my best side-projects.'
+          "With 3+ years of expertise, I've crafted innovative web & native solutions, driving healthcare excellence & more. Let's dive into some of the recent projects I've been a part of!"
         }
       </Text>
 

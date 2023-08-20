@@ -2,7 +2,6 @@ import {
   Intro,
   About,
   CommunityContent,
-  UtilityProjects,
   GetEntertained,
   SideProjects,
   TechStack,
@@ -21,7 +20,6 @@ interface HomeProps {
 
 const Home: React.FC<HomeProps> = ({
   communityContentList,
-  utilityProjectsList,
   entertainmentContentList,
   projectsList,
 }) => {
@@ -43,11 +41,6 @@ const Home: React.FC<HomeProps> = ({
       <div id="side-projects">
         {/* My side projects */}
         <SideProjects projectsList={projectsList} />
-      </div>
-
-      <div id="utility-projects">
-        {/* My quick utility projects */}
-        <UtilityProjects utilityProjectsList={utilityProjectsList} />
       </div>
 
       <div id="tech-stack">

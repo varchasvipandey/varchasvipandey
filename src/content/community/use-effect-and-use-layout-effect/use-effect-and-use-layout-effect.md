@@ -1,5 +1,5 @@
 ---
-title: useEffect & useLayoutEffect
+title: Effect Hooks
 date: 2022-03-01
 publishedOn: LinkedIn
 thumb: ./thumb.jpg
