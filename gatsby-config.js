@@ -72,8 +72,8 @@ module.exports = {
     author: 'Varchasvi Pandey',
     intro:
       'From writing UI architectures on a piece of paper to building full-fledged web applications is what defines me. I work with leading web technologies and designing tools all day every day to make thoughtful applications. 💻',
-    greetings: 'Hi there 👋, I am',
-    profession: 'Web application designer & developer',
+    greetings: 'Hey there! Thanks for coming. I am',
+    profession: 'And I am moving away from this website to a new one.',
     footnote: 'developed to share ❤ ',
   },
 };
