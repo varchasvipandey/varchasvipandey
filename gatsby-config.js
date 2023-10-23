@@ -14,6 +14,7 @@ module.exports = {
         },
       },
     },
+    'gatsby-plugin-netlify',
     'gatsby-plugin-typescript',
     'gatsby-plugin-sass',
     `gatsby-plugin-react-helmet`,
