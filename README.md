@@ -13,7 +13,6 @@ Web application designer and developer based out of New Delhi, India. I am a Fou
 5. Firebase, REST and GraphQL
 6. MongoDB & PostgreSQL
 7. Playing keyboard 🎹, composing and producing music
-8. Making people happy 😄 (Most important)
 
 <br/>
 
