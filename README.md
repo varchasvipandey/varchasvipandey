@@ -26,11 +26,6 @@ Web application designer and developer based out of New Delhi, India. I am a Fou
 5. [Fun musical content on Instagram][instagram]
 6. [Download Alyve Health app for Health Ensurance][alyvehealthapp]
 
-<br/><br/>
-
-### GitHub stats
-
-Please scroll down to see contribution heat map graph. You can also check following and followers list on the left hand panel 🙂. I mean, why to add a donut graph here..
 
 
 
