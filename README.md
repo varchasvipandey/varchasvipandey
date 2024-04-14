@@ -1,6 +1,6 @@
 ## [About me][website]
 
-Web application designer and developer based out of New Delhi, India. I am a Founding team member and Front-end engineer at [Alyve Health][alyvehealth]. I Spend most of my time creating front-end architectures, and designs and developing web and native applications using NextJS and React Native.
+Software engineer based out of New Delhi, India. I am a Founding team member and Front-end Engineer at [Alyve Health][alyvehealth]. I Spend most of my time creating front-end architectures, and designs and developing web and native applications using NextJS and React Native.
 
 <br/>
 
@@ -14,3 +14,4 @@ Web application designer and developer based out of New Delhi, India. I am a Fou
 [website]: https://varchasvipandey.com
 [linkedin]: https://linkedin.com/in/varchasvipandey
 [alyvehealthapp]: https://programs.alyve.health/download-app
+[alyvehealth]: https://alyve.health
