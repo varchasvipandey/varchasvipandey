@@ -12,5 +12,5 @@ Web application designer and developer based out of New Delhi, India. I am a Fou
 
 
 [website]: https://varchasvipandey.com
-[instagram]: https://instagram.com/varchasvipandey
 [linkedin]: https://linkedin.com/in/varchasvipandey
+[alyvehealthapp]: https://programs.alyve.health/download-app
