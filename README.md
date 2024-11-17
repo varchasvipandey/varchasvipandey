@@ -1,6 +1,6 @@
 ## [About me][website]
 
-Software engineer based out of New Delhi, India. I am a Founding team member and Front-end Engineer at [Alyve Health][alyvehealth]. I Spend most of my time creating front-end architectures, and designs and developing web and native applications using NextJS and React Native.
+Software engineer based out of New Delhi, India. I am a Founding team member and Principle Lead Engineer at [Alyve Health][alyvehealth]. I Spend most of my time creating front-end architectures and developing web and native applications using NextJS and React Native.
 
 <br/>
 
